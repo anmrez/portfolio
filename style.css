@@ -278,8 +278,8 @@ body .neon__body:nth-child(8){
 }
 
 #fox{
-  animation: animate-fox 10s linear forwards;
-
+  position: absolute;
+  bottom: 0px;
 }
 #fox g path{
   stroke: #2196f3;
