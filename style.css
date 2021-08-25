@@ -279,7 +279,7 @@ body .neon__body:nth-child(8){
 
 #fox{
   position: absolute;
-  bottom: 0px;
+  bottom: -70px;
 }
 #fox g path{
   stroke: #2196f3;
