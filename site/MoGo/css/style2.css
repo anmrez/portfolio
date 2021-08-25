@@ -27,7 +27,7 @@ h1,h2,h3,h5,h4,h6 {margin: 0;}
 ======Intro========
 ===================*/
 .intro{
-  background: #ebab85 url("/MoGo11/img/i_ntro.jpg");
+  background: #ebab85 url("/portfolio/site/MoGo/img/i_ntro.jpg");
   width: 100%;
   height: 1000px;
 
@@ -398,7 +398,7 @@ flex-wrap: wrap;
 ===================*/
 
 .blok__4{
-  background: #e1e1e1 url("/MoGo11/img/blok__4/fon.jpg");
+  background: #e1e1e1 url("/portfolio/site/MoGo/img/blok__4/fon.jpg")
   width: 100%;
   height: 850px;
   text-align: center;
