@@ -280,6 +280,8 @@ body .neon__body:nth-child(8){
 #fox{
   position: absolute;
   bottom: -70px;
+  right: 0;
+  height: 700px;
 }
 #fox g path{
   stroke: #2196f3;
@@ -315,4 +317,33 @@ body .neon__body:nth-child(8){
   100%{
     stroke-dashoffset: -220;
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+
+
+
+
+
+#fox{
+  position: absolute;
+  bottom: -70px;
+  right: 0;
+  height: 400px;
+}
 }
