@@ -52,7 +52,7 @@ h1,h2,h3,h5,h4,h6 {margin: 0;}
   font-size: 24px;
   letter-spacing: 10px;
   text-align: center;
-
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #000000);
 
 
   color: #fff;
@@ -87,7 +87,7 @@ h1,h2,h3,h5,h4,h6 {margin: 0;}
 .link__portfolio h1{
   font-size: 24px;
   font-family: 'Raleway', sans-serif;
-
+-webkit-box-reflect: below 1px linear-gradient(transparent, #000000);
 }
 
 
@@ -187,6 +187,8 @@ body .neon__body:nth-child(8){
 }
 
 
+
+
 .link__portfolio span:nth-child(1){
   top: 0;
   left: -100%;
@@ -224,6 +226,7 @@ body .neon__body:nth-child(8){
     }
   }
 
+
 .link__portfolio span:nth-child(3){
   bottom: 0;
   right: -100%;
@@ -243,7 +246,6 @@ body .neon__body:nth-child(8){
   }
 
 
-
 .link__portfolio span:nth-child(4){
   left: 0;
   bottom: -100%;
@@ -261,3 +263,56 @@ body .neon__body:nth-child(8){
       bottom: 135%;
     }
   }
+
+.span_v2:nth-child(1){
+  animation-delay: 1s !important;
+}
+.span_v2:nth-child(2){
+  animation-delay: 1.5s !important;
+}
+.span_v2:nth-child(3){
+  animation-delay: 0s !important;
+}
+.span_v2:nth-child(4){
+  animation-delay: 0.5s !important;
+}
+
+#fox{
+  animation: animate-fox 10s linear forwards;
+
+}
+#fox g path{
+  stroke: #2196f3;
+  stroke-dasharray: 2050;
+  stroke-dashoffset: 2050;
+  animation: animate-fox 10s linear forwards infinite;
+}
+#fox g ellipse{
+  stroke: #2196f3;
+  stroke-dasharray: 220;
+  stroke-dashoffset: 220;
+  animation: animate-fox-eye 10s linear forwards infinite;
+}
+
+@keyframes animate-fox {
+  0%{
+    stroke-dashoffset:2050;
+  }
+  50%{
+    stroke-dashoffset:0;
+  }
+  100%{
+    stroke-dashoffset:-2050;
+  }
+}
+@keyframes animate-fox-eye {
+  0%{
+    stroke-dashoffset:220;
+  }
+  50%{
+    stroke-dashoffset:0;
+  }
+  100%{
+    stroke-dashoffset: -220;
+  }
+}
