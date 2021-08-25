@@ -52,7 +52,7 @@ h1,h2,h3,h5,h4,h6 {margin: 0;}
   font-size: 24px;
   letter-spacing: 10px;
   text-align: center;
-  -webkit-box-reflect: below 1px linear-gradient(transparent, #000000);
+  /* -webkit-box-reflect: below 1px linear-gradient(transparent, #000000); */
 
 
   color: #fff;
