@@ -1,0 +1,508 @@
+Body {
+  margin: 0px; /*Сброс отступа*/
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px; /*Размер шрифта*/
+  color: #6c7279; /*Цвет шрифта*/
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased; /*Сглaживание шрифта*/
+  cursor: default;
+
+}
+
+h1,h2,h3,h5,h4,h6 {margin: 0;}
+*,
+*:before,
+*:after{
+  box-sizing: border-box;
+}
+
+
+/*===================CONTAINER====================*/
+
+
+.container{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /*Выравнивание по центру*/
+  padding: 0 15px;
+}
+
+
+/*====================Header====================*/
+
+
+.header {
+  width: 100%;
+  height: 100px;
+  position: absolute; /*Второй слой (intro = 1)*/
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  position: fixed;
+}
+
+.header.grey{
+    background: #31344e;
+    opacity: 0.95;
+}
+
+.header__inner{
+  display: flex;
+  justify-content: space-between; /*Разбросать обекты по краям*/
+  padding: 35px 0; /*отступ сверху/снизу*/
+  border-bottom: 1px solid #4e4f66; /*полоса*/
+  align-items: center; /*Выравнивание сверху/снизу*/
+}
+
+.navigation{
+  display: flex;
+  font-weight: 700; /*Жироность текста*/
+
+}
+
+.navigation__link{
+  margin-left: 50px;
+  color: #fff;
+  text-decoration: none; /*убрать подчеркивание*/
+  opacity: 0.75; /*Прозрачность 25%*/
+
+  transition: opacity .2s linear; /*Длительность получения эффекта при наведении*/
+}
+/*
+.navigation__link:first-child{ /*Псевдоэлемнт (убирает отступ у первой ссылки)*  margin-left: 0px;
+  }*/
+
+.navigation__link:hover{  /*отображение при наведении*/
+  text-decoration: underline; /*показать подчеркивание*/
+  opacity: 1; /*Прозрачность 0%*/
+}
+
+
+/*====================Intro====================*/
+
+
+.intro{
+  display: flex;
+  flex-direction: column; /*с новой строки*/
+  justify-content: center; /*Выровнять по центру*/
+  height: 750px;
+  background: #31344e url("png/intro.jpg"); /*Отображение фона (если нет то однотонный)*/
+  padding-top: 100px;
+    text-align: center; /*Выравнивание по текста по центру*/
+}
+
+.intro__inner{
+  max-width: 970px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.intro__title{
+  color: #fff;
+  font-size: 65px;
+  opacity: 0.9;
+  font-weight: 700;
+  line-height: 1.1; /*межстрочный интервал*/
+  text-transform: uppercase; /*Caps*/
+
+}
+
+.intro__subtitle{
+  margin-top: 10px;
+  color: #fff;
+  opacity: 0.9;
+  font-size: 22px;
+  line-height: 1.5;
+  font-weight: 350;
+  margin-bottom: 60px;
+}
+
+
+/*====================buttom====================*/
+
+
+.btn{
+  display: inline-block; /*Возможность задавать размры*/
+  vertical-align: top;
+  font-size: 13px;
+
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+
+  text-decoration: none;
+  padding: 14px 48px;
+  border-radius: 2px; /*Скруглить углы*/
+
+  transition: background .15s linear; /*Время смены цвета*/
+
+/*buttom in HTML*/
+  font-family: inherit; /*Унаследовать шрифт*/
+  border: 0;
+  cursor: pointer; /*курсор "нажать"*/
+}
+
+.btn--red{
+  background-color: #e84545;
+}
+
+.btn--red:hover{
+    background-color: #a53030;
+    opacity: 0.95;
+}
+
+.btn--long{
+  min-width: 280px;
+
+}
+
+
+/*====================Feathers====================*/
+
+
+.Feathers{
+  display: flex;
+  margin: 85px 0;
+  flex-wrap: wrap;  /*Переброс блока содержимого на новую строку*/
+
+
+}
+
+.Feathers__item{
+  width: 33.33333%;
+  text-align: center;
+  padding: 0 40px;
+  margin: 35px 0;
+
+}
+
+.Feathers__item:first-child{ /*Псевдоэлемнт (убирает отступ у первой ссылки)*
+padding-left: 0px;*/}
+
+.Feathers__item__icon{
+
+
+}
+
+.Feathers__item__title{
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #2d3033;
+    text-transform: uppercase;
+
+}
+
+.Feathers__item__text{
+    margin-top: 10px;
+    font-size: 14px;
+    color: #6c7279;
+    line-height: 1.5;
+}
+
+
+/*====================Work====================*/
+
+
+.work{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.work__item{
+  width: 25%;
+  height: 350px;
+  position: relative;
+  overflow: hidden; /* убрать все что вылезает в блок */
+
+  border-bottom: 1px solid #fff;
+  border-right:  1px solid #fff;
+}
+
+.work__item:hover .work__item__content{
+  opacity: 1;
+
+}
+
+.work__item__img{
+  position: absolute;
+  top: 50%;   /* Выравниване картинки по центру */
+  left: 50%;  /* Выравниване картинки по центру */
+  z-index: 1;
+
+  transform: translate3d(-50%,-50%,0); /* Выравниване картинки по центру */
+}
+
+.work__item__content{
+  width: 100%;
+  height: 100%;
+  position:absolute;
+
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  opacity: 0;
+  background-color: rgba(232,69,69, .9);
+  transition: opacity .3s linear; /* плавный переход */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.work__item__content__title{
+  text-transform: uppercase;
+  color: #FFF;
+  font-weight: 700;
+  font-size: 14px;
+  z-index: 50;
+  margin-bottom: 5px;
+}
+
+.work__item__content__text{
+
+  color: #FFF;
+
+  z-index: 50;
+}
+
+
+/*====================Team====================*/
+
+
+.team{
+  margin-top: 100px;
+  margin-bottom: 70px;
+}
+
+.team__inner{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+
+}
+
+.team__item{
+  width: 25%;
+  padding: 0 15px;
+  margin-bottom: 30px;
+
+}
+
+.team__img{
+  margin-bottom: 20px;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.team__title__1{
+  margin-bottom: 22px;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #2d3033;
+}
+
+.team__title__2 {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #e84545;
+}
+
+.team__text{
+  color: #6c7279;
+  line-height: 1.5;
+  margin-bottom: 36px;
+}
+
+
+/*====================social====================*/
+
+
+.social{
+  display: flex;
+
+
+}
+
+.social__item{
+  width: 40px;
+  height: 40px;
+  border: 1px solid #c6cacc;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-right: 5px;
+}
+
+.social__item:hover {
+  background-color: #a5a8aa;
+  transition: background .3s linear;
+}
+
+.social__item:hover .social__icon{   /*При наводе на.. меняеться ...*/
+  fill: #3b5999;
+}
+
+.social__icon{
+  fill: #c6cacc;
+  display: block;
+  height: 18px;
+}
+
+.social--legs{
+  justify-content: center;
+
+}
+
+
+/*====================Slider====================*/
+
+
+.Slider{
+  background-color: #53354a;
+  overflow: hidden; /* Большие картинки не вылазиют за границы блока*/
+
+}
+
+.Slider__inner{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.Slider__inner__img{
+  width: 50%;
+  height: 500px;
+  position: relative; /*Позиционирование относительно данного блока*/
+}
+
+.Slider__inner__img__autor{
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  z-index: 1;
+
+  transform: translateY(-50%);
+}
+
+.Slider__inner__content{
+  width: 50%;
+  font-size: 36px;
+  color: #fff;
+  font-style: italic;
+  line-height: 1.2;
+
+  padding-left: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.Slider__inner__content__autor{
+  font-size: 13px;
+  padding-top: 45px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
+/*====================Download====================*/
+
+
+.Download{
+ margin: 100px 0;
+  text-align: center;
+}
+
+.Download__title{
+  font-size: 28px;
+  color: #2d3033;
+  padding-bottom: 25px;
+}
+
+.Download__subtitle{
+  color: #2d3033;
+  font-size: 13px;
+  text-transform: uppercase;
+  padding-bottom: 40px;
+}
+
+
+/*====================legs====================*/
+.legs{
+  background-color: #3a3e64;
+  text-align: center;
+
+}
+
+.legx__inner{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.legx__item{
+  margin: 70px 0;
+  max-width: 33.33333%;
+  min-width: 33.33333%;
+
+}
+
+.legx__item__title{
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 1;
+}
+
+
+.legx__item__text{
+  font-size: 15px;
+  line-height: 1.5;
+  color: #fff;
+  opacity: .5;
+
+}
+
+
+.legs__2{
+  background-color: #313454;
+  height: 95px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.legs__2__text{
+  color: #808080;
+  margin-bottom: 10px;
+}
+
+.legs__2__text__2{
+  color: #808080;
+  display: flex;
+  justify-content: center
+}
+
+.legs__2__text__3{
+  color: red;
+  padding-left: 8px;
+  font-size: 16px;
+}
+
+.legs__2__text__4{
+  color: #FFF;
+  padding-left: 8px;
+}
