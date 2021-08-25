@@ -87,7 +87,7 @@ h1,h2,h3,h5,h4,h6 {margin: 0;}
 .link__portfolio h1{
   font-size: 24px;
   font-family: 'Raleway', sans-serif;
--webkit-box-reflect: below 1px linear-gradient(transparent, #000000);
+/* -webkit-box-reflect: below 1px linear-gradient(transparent, #000000); */
 }
 
 
