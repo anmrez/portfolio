@@ -277,30 +277,39 @@ body .neon__body:nth-child(8){
   animation-delay: 0.5s !important;
 }
 
+
+
+/* Benjamin ==================== */
+
 #fox{
   position: absolute;
   bottom: -70px;
   right: 0;
   height: 700px;
 }
-#fox g path{
+/* #fox g path{ */
+#body_fox{
   stroke: #2196f3;
   stroke-dasharray: 2050;
   stroke-dashoffset: 2050;
-  animation: animate-fox 10s linear forwards infinite;
+  animation: animate-fox 15s linear forwards infinite;
 }
-#fox g ellipse{
+/* #fox g ellipse{ */
+#R_eye, #L_eye, ellipse{
   stroke: #2196f3;
-  stroke-dasharray: 220;
-  stroke-dashoffset: 220;
-  animation: animate-fox-eye 10s linear forwards infinite;
+  stroke-dasharray: 240;
+  stroke-dashoffset: 240;
+  animation: animate-fox-eye 15s linear forwards infinite;
 }
 
 @keyframes animate-fox {
   0%{
     stroke-dashoffset:2050;
   }
-  50%{
+  25%{
+    stroke-dashoffset:0;
+  }
+  75%{
     stroke-dashoffset:0;
   }
   100%{
@@ -309,13 +318,16 @@ body .neon__body:nth-child(8){
 }
 @keyframes animate-fox-eye {
   0%{
-    stroke-dashoffset:220;
+    stroke-dashoffset:240;
   }
-  50%{
+  25%{
+    stroke-dashoffset:0;
+  }
+  75%{
     stroke-dashoffset:0;
   }
   100%{
-    stroke-dashoffset: -220;
+    stroke-dashoffset: -240;
   }
 }
 
