@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="Stil.css">
@@ -7,6 +7,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
 
 
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="png/Favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="png/Favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="png/Favicon/favicon-16x16.png">
+  <link rel="manifest" href="png/Favicon/site.webmanifest">
+  <link rel="mask-icon" href="png/Favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+
+
+
+
+
+  <meta name="description" content="Описание">
+  <meta name="keywords" content="Описание">
 </head>
 <body>
 
@@ -41,11 +58,11 @@
           </div>
 
         <nav class="navigation">
-            <a class="navigation__link" href="#" data-scrol="#Feathers">FEATURES</a>
-            <a class="navigation__link" href="#" data-scrol="#work">WORKS</a>
-            <a class="navigation__link" href="#" data-scrol="#team">OUR TEAM</a>
-            <a class="navigation__link" href="#" data-scrol="#Slider">TESTIMONIALS</a>
-            <a class="navigation__link" href="#" data-scrol="#Download">DOWNLOAD</a>
+            <a class="navigation__link" href="#Feathers">FEATURES</a>
+            <a class="navigation__link" href="#work">WORKS</a>
+            <a class="navigation__link" href="#team">OUR TEAM</a>
+            <a class="navigation__link" href="#Slider">TESTIMONIALS</a>
+            <a class="navigation__link" href="#Download">DOWNLOAD</a>
         </nav>
       </div>
     </div>
