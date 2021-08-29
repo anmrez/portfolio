@@ -1,12 +1,27 @@
 
 const burger = document.querySelector(".nav__menu");
 const nav = document.querySelector(".navigation");
-
+const link = document.querySelectorAll(".navigation__link");
 
 burger.addEventListener('click', () =>{
   nav.classList.toggle("open");
 
 })
+
+
+link.forEach(link => {
+  link.addEventListener('click', () =>{
+    nav.classList.toggle("open");
+
+  })
+});
+
+
+
+
+
+
+
 
 document.querySelectorAll('a[href^="#"').forEach(link => {
 
