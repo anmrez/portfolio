@@ -7,6 +7,7 @@ Body {
   -webkit-font-smoothing: antialiased; /*Сглaживание шрифта*/
 
 
+  /*! overflow: hidden; */
 }
 
 :root {
@@ -27,7 +28,7 @@ h1,h2,h3,h5,h4,h6 {margin: 0;}
 ======Intro========
 ===================*/
 .intro{
-  background: #ebab85 url("/portfolio/site/MoGo/img/i_ntro.jpg");
+  background: #ebab85 url("/MoGo11/img/i_ntro.jpg");
   width: 100%;
   height: 1000px;
 
@@ -46,6 +47,12 @@ h1,h2,h3,h5,h4,h6 {margin: 0;}
   display: flex;
   justify-content: space-between;
   padding-top: 50px;
+  height: 10%;
+  position: fixed;
+  background: #ebab85;
+  width: 100%;
+  left: 0;
+  z-index: 9;
 }
 
 /*navigation*/
@@ -59,16 +66,51 @@ h1,h2,h3,h5,h4,h6 {margin: 0;}
 }
 
 .Burger span{
-  width: 25px;
+  width: 35px;
   height: 3px;
   background: #fff;
 
 
   z-index: 1000;
+  box-shadow: 0 10px 0 #fff, 0 20px 0 #fff;
 }
+
+.navigation{
+  display: flex;
+  flex-direction: column;
+  font-size: 34px;
+  
+  padding-top: 10%;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  height: 100vh;
+  /*! display: none; */
+  clip-path: circle(100px at 90% -10%);
+  -webkit-clip-path: circle(100px at 90% -10%);
+  background: #ebab85e6;
+  transition: 1s all ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.navigation.open{
+  clip-path: circle(1200px at 90% -10%);
+  -webkit-clip-path: circle(1200px at 90% -10%);
+  pointer-events: all;
+}
+
 
 .slidebar{
   display: none;
+}
+
+.intro__header__mogo{
+  padding-left: 20px;
+  
+  z-index: 2;
 }
 
 .intro__header__navigation{
@@ -79,7 +121,7 @@ h1,h2,h3,h5,h4,h6 {margin: 0;}
 
 .intro__header__navigation__link{
   text-decoration: none;
-  margin-left: 50px;
+  /*! margin-left: 50px; */
   color: #fff;
   font-family: 'Roboto', sans-serif;
 
@@ -96,6 +138,7 @@ h1,h2,h3,h5,h4,h6 {margin: 0;}
 .intro__inner{
   text-align: center;
 }
+
 
 .intro__inner__title{
   font-family: 'Kaushan Script', cursive;
@@ -398,7 +441,7 @@ flex-wrap: wrap;
 ===================*/
 
 .blok__4{
-  background: #e1e1e1 url("/portfolio/site/MoGo/img/blok__4/fon.jpg");
+  background: #e1e1e1 url("/MoGo11/img/blok__4/fon.jpg");
   width: 100%;
   height: 850px;
   text-align: center;
@@ -660,6 +703,10 @@ flex-wrap: wrap;
 .blok__7{
   min-height: 1050px;
   text-align: center;
+}
+
+.blok__7__content{
+  max-width: 100%;
 }
 
 .blok__7__inner{
@@ -971,7 +1018,7 @@ max-width: var(--bl9__inner);
 
 
 .block__11{
-  background: url(/MoGo11/img/block__11/fon__1.jpg);
+  background: url(/portfolio/site/MoGo/img/block__11/fon__1.jpg)
   min-height: 830px;
 }
 
@@ -988,7 +1035,7 @@ max-width: var(--bl9__inner);
 }
 
 .block__11__item{
-  width: 570px;
+  width: 100%;
   display: flex;
 }
 
@@ -1011,6 +1058,7 @@ max-width: var(--bl9__inner);
   text-align: left;
   padding: 0;
 
+  max-width: 80%;
 }
 
 .bl11-ST{
@@ -1126,7 +1174,7 @@ max-width: var(--bl9__inner);
 
 
 .block__13{
-  background: url(/portfolio/site/MoGo/img/block__13/fon.jpg)
+  background: url(/MoGo11/img/block__13/fon.jpg);
 
   height: 200px;
 }
@@ -1593,8 +1641,12 @@ max-width: var(--bl9__inner);
 
   .intro__header__navigation__link
   {
-    margin-left: 30px;
+    /*! margin-left: 30px; */
 
+    height: 20%;
+    /*! padding-top: 10%; */
+    width: 100%;
+    text-align: center;
   }
 
   .intro__inner__text
@@ -1619,13 +1671,13 @@ max-width: var(--bl9__inner);
   }
 
   .blok__4__text__photo__1{
-    left: 70px;
+    left: 1%;
 
   }
 
   .blok__4__text__photo__2{
     position: absolute;
-    right: -140px;
+    right: 10%;
     top: 311px;
 
   }
@@ -1708,7 +1760,6 @@ max-width: var(--bl9__inner);
 
   .intro__header__navigation__link
   {
-    display: none;
 
   }
 
@@ -1729,10 +1780,13 @@ max-width: var(--bl9__inner);
   /*! position: relative; */
   /*! margin-right: 100px; */
   position: fixed;
-  background: var(--grey);
+  /*! background: var(--grey); */
   padding: 10px;
   border-radius: 25%;
   z-index: 10000;
+  top: 4%;
+  right: 10%;
+  padding-bottom: 30px;
 }
 
 .Burger__active{
@@ -1882,7 +1936,7 @@ max-width: var(--bl9__inner);
 
 
   .bl11-t{
-    max-width: 440px;
+    max-width: 100%;
 
 
   }

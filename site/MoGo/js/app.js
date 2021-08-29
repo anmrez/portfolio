@@ -1,6 +1,7 @@
 function openSidebar() {
-  document.getElementById("Burger").classList.toggle('Burger__active');
-  document.getElementById("Sidebar").classList.toggle('Sidebar__active');
+  const nav = document.querySelector(".navigation");
+  nav.classList.toggle("open");
+
 }
 
 //============Acardion============
