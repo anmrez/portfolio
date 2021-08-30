@@ -1672,6 +1672,21 @@ max-width: var(--bl9__inner);
     top: 0;
   }
 
+  .Burger{
+  display: grid;
+  /*! padding-right: 30%; */
+  /*! position: relative; */
+  /*! margin-right: 100px; */
+  position: fixed;
+  /*! background: var(--grey); */
+  padding: 10px;
+  border-radius: 25%;
+  z-index: 10000;
+  top: 2%;
+  right: 10%;
+  padding-bottom: 30px;
+}
+  
   .intro__inner__text
   {
     font-size: 70px;
