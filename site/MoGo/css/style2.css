@@ -1062,7 +1062,7 @@ max-width: var(--bl9__inner);
   text-align: left;
   padding: 0;
 
-  max-width: 80%;
+  max-width: 100%;
 }
 
 .bl11-ST{
@@ -2197,13 +2197,13 @@ padding-top: 140px;
 
   .blok__7__content{
    text-align: center;
-   width: 350px;
+   width: 100%;
 
 
   }
 
   .bl11{
-    text-align: center
+    text-align: center;
 
   }
 
