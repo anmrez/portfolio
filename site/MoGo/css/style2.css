@@ -127,7 +127,9 @@ h1,h2,h3,h5,h4,h6 {margin: 0;}
   /*! margin-left: 50px; */
   color: #fff;
   font-family: 'Roboto', sans-serif;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .intro__header__navigation__link:hover{
@@ -1687,7 +1689,7 @@ max-width: var(--bl9__inner);
   right: 10%;
   padding-bottom: 30px;
 }
-  
+
   .intro__inner__text
   {
     font-size: 70px;
