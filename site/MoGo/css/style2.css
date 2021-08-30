@@ -28,7 +28,7 @@ h1,h2,h3,h5,h4,h6 {margin: 0;}
 ======Intro========
 ===================*/
 .intro{
-  background: #ebab85 url("/MoGo11/img/i_ntro.jpg");
+  background: #ebab85 url("/portfolio/site/MoGo/img/i_ntro.jpg");
   width: 100%;
   height: 1000px;
 
@@ -49,7 +49,7 @@ h1,h2,h3,h5,h4,h6 {margin: 0;}
   /*! padding-top: 6%; */
   height: 9%;
   position: fixed;
-  background: #ebab85;
+  background: #e98882c2;
   /*! max-width: 1200px; */
   left: 0;
   z-index: 9;
@@ -443,7 +443,7 @@ flex-wrap: wrap;
 ===================*/
 
 .blok__4{
-  background: #e1e1e1 url("/MoGo11/img/blok__4/fon.jpg");
+  background: #e1e1e1 url("/portfolio/site/MoGo/img/blok__4/fon.jpg");
   width: 100%;
   height: 850px;
   text-align: center;
@@ -1020,8 +1020,7 @@ max-width: var(--bl9__inner);
 
 
 .block__11{
-  background: url(/portfolio/site/MoGo/img/block__11/fon__1.jpg)
-  min-height: 830px;
+  background: url(/portfolio/site/MoGo/img/block__11/fon__1.jpg);
 }
 
 .block__11__inner{
@@ -1176,7 +1175,7 @@ max-width: var(--bl9__inner);
 
 
 .block__13{
-  background: url(/MoGo11/img/block__13/fon.jpg);
+  background: url(/portfolio/site/MoGo/img/block__13/fon.jpg);
 
   height: 200px;
 }
