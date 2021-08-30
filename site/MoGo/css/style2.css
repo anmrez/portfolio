@@ -1653,9 +1653,9 @@ max-width: var(--bl9__inner);
   .navigation{
     display: flex;
     flex-direction: column;
-    font-size: 34px;
+    font-size: 24px;
 
-    padding-top: 10%;
+    padding-top: 15%;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -1665,7 +1665,7 @@ max-width: var(--bl9__inner);
     /*! display: none; */
     clip-path: circle(100px at 90% -30%);
     -webkit-clip-path: circle(100px at 90% -10%);
-    background: #ebab85e6;
+    background: #e98882c2;
     transition: 1s all ease;
     z-index: 1;
     pointer-events: none;
