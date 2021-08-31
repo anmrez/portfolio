@@ -5,7 +5,7 @@ body{
   margin: 0;
   background: #202430;;
   max-height: 100vh;
-  /*! overflow: hidden; */
+  overflow: hidden;
 }
 
 .neon{
@@ -381,6 +381,10 @@ body .neon__body:nth-child(8){
 
 
 @media (max-width: 480px) {
+  body{
+    overflow: auto;
+
+  }
 
 
   .neon{
