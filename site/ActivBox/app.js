@@ -42,3 +42,50 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
         });
     });
 });
+
+
+
+
+// navigation scrollBy
+
+const scrollElement = [document.querySelector(".Feathers"),
+                      document.querySelector(".work"),
+                      document.querySelector(".team"),
+                      document.querySelector(".Slider"),
+                      document.querySelector(".Download")];
+const buddle = document.querySelector(".buddle");
+const option = {
+  threshold: 0.7
+
+};
+
+
+let obsever = new IntersectionObserver(navCheck, option);
+
+function navCheck(entries){
+  entries.forEach(entry =>{
+    const className = entry.target.className;
+    const activeAnchor = document.querySelector(`[data-page=${className}]`)
+    const coords = activeAnchor.getBoundingClientRect();
+    const directions = {
+        height: coords.height,
+        width: coords.width,
+        left: coords.left,
+        top: coords.top
+    };
+    if (entry.isIntersecting){
+      buddle.style.setProperty('left', `${directions.left}px`);
+      buddle.style.setProperty('top', `${directions.top}px`);
+      buddle.style.setProperty('width', `${directions.width}px`);
+      buddle.style.setProperty('height', `${directions.height}px`);
+    };
+
+  });
+
+}
+
+
+  scrollElement.forEach(section => {
+    obsever.observe(section);
+    console.log(section);
+  })
