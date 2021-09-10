@@ -32,10 +32,14 @@ document.body.appendChild(renderer.domElement);
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 
 
-
+//=============================================================================
 // scene  ================
 let sceneWidth = 20;
 const textureLoader = new THREE.TextureLoader();
+
+// light
+let hlight = new THREE.AmbientLight (0x404040,12);
+scene.add(hlight);
 
 // street
 {
@@ -176,20 +180,37 @@ const textureLoader = new THREE.TextureLoader();
     return Math.random() * ( max - min ) + min;
   }
 
-// load model
 
-const loader = new THREE.ObjectLoader();
-loader.load('assets/3d_models/Bench.json', onLoad );
+//=============================================================================
+// load model ==================
 
-function onLoad(bench){
-  bench.scale.set( 0.7, 0.7, 0.7 );
+// const loaderObj = new THREE.ObjectLoader();
+const loader = new THREE.GLTFLoader();
+// loaderObj.load('assets/3d_models/Bench.json', onLoad );
+loader.load('assets/3d_models/bench.glb', benchBlender );
 
-  let x = random(-sceneWidth / 2, sceneWidth / 2)
-  bench.position.set( x, 0.5, -3.5)
-  scene.add(bench);
+
+function benchBlender(gltf){
+  gltf.scene.scale.set( 0.18, 0.18, 0.18 );
+  gltf.scene.rotation.y = 1.55
+  let x = random( -sceneWidth/2+1, sceneWidth/2-1)
+  gltf.scene.position.set( x, 0.2, -3.5)
+  scene.add( gltf.scene );
   animate();
 }
 
+// function onLoad(bench){
+//   bench.scale.set( 0.7, 0.7, 0.7 );
+//
+//   let x = random(-sceneWidth / 2, sceneWidth / 2)
+//   bench.position.set( x, 0.5, -3.5)
+//   scene.add(bench);
+//   animate();
+// }
+
+
+
+//=============================================================================
 // animation  ================
 function animate() {
 
@@ -202,10 +223,9 @@ function animate() {
 animate();
 
 
+window.addEventListener('resize', onWindowResize())
 function onWindowResize(){
+  renderer.setSize(window.innerWidth, window.innerHeight)
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight)
 }
-
-window.addEventListener("resize", onWindowResize())
