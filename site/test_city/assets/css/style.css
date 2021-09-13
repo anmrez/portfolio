@@ -1,0 +1,283 @@
+body{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 10em
+}
+
+:root{
+  --timer: 0.5s;
+
+}
+
+
+
+
+picture{
+  position: relative;
+  top: 15vh;
+
+}
+picture svg{
+  height: 50vh;
+  z-index: 1;
+}
+
+.bench{
+
+}
+
+.road{
+  width: 120%;
+  height: 5em;
+  background: #3d3d3d;
+  transform: rotateX( 88deg );
+  position: absolute;
+  bottom: 34%;
+  z-index: -2;
+  left: -9%;
+  overflow: hidden;
+}
+
+.road__linear__block1{
+  position: relative;
+  animation: run1 2s infinite linear;
+}
+@keyframes run1 {
+  0%, 100%{
+    left: 0%
+  }
+  50%{
+    left: -100%;
+  }
+  50.001%{
+    left: 100%;
+  }
+}
+.road__linear__block2{
+  left: 100%;
+  position: relative;
+  animation: run2 2s infinite linear;
+}
+@keyframes run2 {
+  0%, 100%{
+    left: 100%
+  }
+  50%{
+    left: 0%;
+  }
+  99.99%{
+    left: -100%;
+  }
+}
+.road__linear {
+  background: #fff;
+  width: 10%;
+  height: 0.5em;
+  top: 2.5em;
+  position: absolute;
+}
+.line1{
+  left: 2em;
+}
+.line2{
+  left: 14em;
+}
+.line3{
+  left: 27em;
+}
+.line4{
+  left: 39em;
+}
+
+
+
+.Load{
+  color: #ccc;
+  font-size: 36px;
+  font-family: sans-serif;
+  text-align: center;
+  position: relative;
+  bottom: 20%;
+}
+
+/* Legs1 ======================== */
+#Legs1{ animation: legs1 var(--timer) infinite linear; }
+@keyframes legs1 {
+  0%,100%{
+    transform: rotate(0deg) translateX(0px) translateY(0px);
+  }
+  50%{
+    transform: rotate(-2deg) translateX(-5%) translateY(-10px);
+  }
+}
+
+#Legs1_top{ animation: legs1 var(--timer) infinite linear; }
+@keyframes legs1 {
+  0%, 100%{
+    transform: rotate(0deg) translateX(0px) translateY(0px);
+  }
+  50%{
+    transform: rotate(-15deg) translateX(-10%) translateY(6%);
+  }
+}
+
+
+#Legs1_bottom{ animation: legs1_bottom var(--timer) infinite linear; }
+@keyframes legs1_bottom {
+  0%, 100%{
+    transform: rotate(0deg) translateX(0px) translateY(0px);
+  }
+  50%{
+    transform: rotate(20deg) translateX(12.5%) translateY(-17%);
+  }
+}
+
+/* Legs4 ======================== */
+#Legs4{ animation: legs4 var(--timer) infinite linear backwards; }
+@keyframes legs4 {
+  0%,100%{
+    transform: rotate(0deg) translateX(0px) translateY(0px);
+  }
+  50%{
+    transform: rotate(-2deg) translateX(-5%) translateY(-10px);
+  }
+}
+
+
+#Legs4_top{ animation: legs4_top var(--timer) infinite linear backwards; }
+@keyframes legs4_top {
+  0%, 100%{
+    transform: rotate(0deg) translateX(0px) translateY(0px);
+  }
+  50%{
+    transform: rotate(-15deg) translateX(-10%) translateY(32.1%);
+  }
+}
+
+
+#Legs4_bottom{ animation: legs4_bottom var(--timer) infinite linear backwards; }
+@keyframes legs4_bottom {
+  0%, 100%{
+    transform: rotate(0deg) translateX(0px) translateY(0px);
+  }
+  50%{
+    transform: rotate(20deg) translateX(15%) translateY(-42.59%);
+  }
+}
+
+
+/* ======================== */
+
+/* Legs3 ======================== */
+#Legs3{ animation: legs3 var(--timer) infinite linear; }
+@keyframes legs3 {
+  0%,100%{
+    transform: rotate(-2deg) translateX(0%) translateY(0px);
+  }
+  50%{
+    transform: rotate(0deg) translateX(0px) translateY(0px);
+  }
+}
+
+#Legs3_top{ animation: legs3_top var(--timer) infinite linear; }
+@keyframes legs3_top {
+  0%, 100%{
+    transform: rotate(-15deg) translateX(-5%) translateY(5%);
+  }
+  50%{
+    transform: rotate(0deg) translateX(0px) translateY(0px);
+  }
+}
+
+
+#Legs3_bottom{ animation: legs3_bottom var(--timer) infinite linear; }
+@keyframes legs3_bottom {
+  0%, 100%{
+    transform: rotate(20deg) translateX(19%) translateY(-17%);
+  }
+  50%{
+    transform: rotate(0deg) translateX(0px) translateY(0px);
+  }
+}
+
+
+/* Legs2 ======================== */
+#Legs2{ animation: legs2 var(--timer) infinite linear; }
+@keyframes legs2 {
+  0%,100%{
+    transform: rotate(-2deg) translateX(0%) translateY(0px);
+  }
+  50%{
+    transform: rotate(0deg) translateX(0px) translateY(0px);
+  }
+}
+
+#Legs2_top{ animation: legs2_top var(--timer) infinite linear; }
+@keyframes legs2_top {
+  0%, 100%{
+    transform: rotate(-15deg) translateX(-10%) translateY(25%);
+  }
+  50%{
+    transform: rotate(0deg) translateX(0px) translateY(0px);
+  }
+}
+
+
+#Legs2_bottom{ animation: legs2_bottom var(--timer) infinite linear; }
+@keyframes legs2_bottom {
+  0%, 100%{
+    transform: rotate(20deg) translateX(12%) translateY(-41%);
+  }
+  50%{
+    transform: rotate(0deg) translateX(0px) translateY(0px);
+  }
+}
+
+/* Body ======================== */
+#Body{ animation: body var(--timer) infinite linear; }
+@keyframes body {
+  0%, 100%{
+    transform: rotateY(5deg) translateY(1%);
+  }
+  50%{
+    transform: rotateY(0deg) translateY(0%);
+  }
+}
+
+/* Table ======================== */
+#Table{ animation: Table var(--timer) infinite linear; }
+@keyframes Table {
+  0%, 100%{
+    transform: rotateY(16deg) translateY(1.5%);
+  }
+  50%{
+    transform: rotateY(0deg) translateY(-1%);
+  }
+}
+
+
+.Pre-loader{
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Pre-loader.finish{
+  display: none;
+}
+
+
+@media (max-width: 650px) {
+  picture svg {
+    height: 25vh;
+  }
+
+}
