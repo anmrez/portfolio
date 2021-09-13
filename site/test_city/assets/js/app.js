@@ -218,9 +218,12 @@ function benchBlender(gltf){
   scene.add( gltf.scene );
   animate();
 }
+let loadText = document.querySelector(".Load");
 function loading(xhr ){
-  console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
-  if ( xhr.loaded / xhr.total * 100 == 100 ){
+  let lo = xhr.loaded / xhr.total * 100
+  // console.log( lo + '% loaded' );
+  loadText.textContent = Math.floor(lo) + "% Loading...";
+  if ( lo >= 100 ){
     const preload = document.querySelector(".Pre-loader");
     preload.classList.add('finish');
   }

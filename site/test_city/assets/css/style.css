@@ -268,6 +268,7 @@ picture svg{
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .Pre-loader.finish{
@@ -275,9 +276,12 @@ picture svg{
 }
 
 
-@media (max-width: 650px) {
-  picture svg {
-    height: 25vh;
+@media (min-width: 650px) {
+  .bench svg {
+    height: 25vh !important;
+  }
+  .Load{
+    font-size: 48px;
   }
 
 }
