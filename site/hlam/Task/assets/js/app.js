@@ -8,6 +8,8 @@ function link(){
   document.querySelector(".Header__navigation").classList.toggle('open');
 }
 
+
+
 // input Phone
 function validate(evt) {
   var theEvent = evt || window.event;

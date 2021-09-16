@@ -206,6 +206,7 @@ h1,h2,h3,h5,h4,h6 {margin: 0;}
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  margin-bottom: 20px;
 }
 
 .footer__butt{
@@ -565,8 +566,14 @@ h1,h2,h3,h5,h4,h6 {margin: 0;}
 }
 
 .block_3_butt{
-
   margin: 20px auto;
+  background: var(--color1);
+}
+.block_3_butt:hover{
+  background: var(--color2);
+}
+.block_3_butt a{
+  color: var(--color3)
 }
 
 .block_3_characteristic{
@@ -882,11 +889,12 @@ h1,h2,h3,h5,h4,h6 {margin: 0;}
   grid-column: 1/-1;
   transition: .5s linear;
   clip-path: circle(100px at 120% -50%);
-  height: 92vh;
+  height: 100vh;
   position: absolute;
   left: -3%;
   width: 106%;
   pointer-events: none;
+  padding-top: 10%;
 }
 
 .Header__navigation.open{
