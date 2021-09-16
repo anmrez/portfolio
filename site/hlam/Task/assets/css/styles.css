@@ -212,11 +212,11 @@ h1,h2,h3,h5,h4,h6 {margin: 0;}
 .footer__butt{
   margin-top: 10%;
 }
-.footer__butt a:hover{
-  color: var(--color3);
-}
 .footer__butt:hover{
   background: var(--color2);
+}
+.footer__butt:hover a{
+  color: var(--color3);
 }
 
 /*======================
