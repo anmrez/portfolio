@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Название</title>
+    <meta name="viewport" content="width=device-width, initeal-scale=1">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Chrome, firefox, opera -->
+    <meta name="theme-color" content="#c722c9">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#c722c9">
+    <!-- Ios -->
+    <meta name="apple-mobile-web-status-bar-style" content="#c722c9">
+
+</head>
+<body>
+
+
+
+
+
+<!--header-->
+  <header class="header">
+    <div class="container">
+      <div class="Header__content">
+        <picture class="Header__placeholder">
+          <img src="https://via.placeholder.com/50" alt="">
+        </picture>
+        <div class="Burger" onclick="openSidebar()">
+          <span class="burger__span"></span>
+
+        </div>
+          <div class="Header__navigation">
+            <a href="#intro" class="Header__link" onclick="link()">
+              <div class="">
+                Главная
+              </div>
+            </a>
+            <a href="#block_1" class="Header__link" onclick="link()">
+              <div class="">
+                Состав
+              </div>
+            </a>
+            <a href="#block_2" class="Header__link" onclick="link()">
+              <div class="">
+                Отзывы
+              </div>
+             </a>
+            <a href="#block_3" class="Header__link" onclick="link()">
+              <div class="">
+                Описание
+              </div>
+             </a>
+            <a href="#footer" class="Header__link" onclick="link()">
+              <div class="">
+                Заказать
+              </div>
+             </a>
+          </div>  <!--Header__navigation-->
+      </div>  <!--Header__content-->
+    </div>  <!--container-->
+  </header>
+
+
+<!--intro-->
+  <div class="intro" id="intro">
+    <video autoplay loop muted class="bgvideo" id="bgvideo">
+      <source src="assets\i\CMD_1.mp4" type="video/mp4"></source>
+    </video>
+    <div class="container">
+      <div class="intro__content">
+
+        <div class="specifications">
+          <ul>
+            <li>Без вредный</li>
+            <li>Из натуральных ингридиентов</li>
+            <li>Дешевый</li>
+          </ul>
+        </div>  <!--specifications-->
+
+        <div class="product">
+          LevelUp
+          <picture>
+            <img src="assets\i\prod.png" alt="LevelUp">
+          </picture>
+          <div class="butt">
+            <a href="#footer">
+              Заказать
+            </a>
+          </div>  <!--butt-->
+        </div>  <!--product-->
+
+      </div>  <!--intro__content-->
+    </div>  <!--container-->
+  </div>  <!--intro-->
+
+
+<!--block_1-->
+  <div class="block_1" id="block_1">
+    <div class="container">
+      <div class="block_1__content">
+        Состав
+        <div class="structure__blog">
+          <div class="structure__blog__img">
+            <picture>
+              <img class="" src="assets\i\prod.png" alt="LevelUp">
+            </picture>
+          </div>
+
+          <div class="structure">
+
+            <div class="structure__content">
+              <div class="structure__content__img">
+                <picture>
+                  <img src="assets\i\prod.png" alt="">
+                </picture>
+              </div>
+              <div class="structurу__text">
+                Текст
+              </div>
+            </div>  <!--structure__content-->
+
+            <div class="structure__content">
+              <div class="structure__content__img">
+                <picture>
+                  <img src="assets\i\prod.png" alt="">
+                </picture>
+              </div>
+              <div class="structurу__text">
+                Текст
+              </div>
+            </div>  <!--structure__content-->
+
+            <div class="structure__content">
+              <div class="structure__content__img">
+                <picture>
+                  <img src="assets\i\prod.png" alt="">
+                </picture>
+              </div>
+              <div class="structurу__text">
+                Текст
+              </div>
+            </div>  <!--structure__content-->
+
+            <div class="structure__content">
+              <div class="structure__content__img">
+                <picture>
+                  <img src="assets\i\prod.png" alt="">
+                </picture>
+              </div>
+              <div class="structurу__text">
+                Текст
+              </div>
+            </div>  <!--structure__content-->
+
+            <div class="structure__content">
+              <div class="structure__content__img">
+                <picture>
+                  <img src="assets\i\prod.png" alt="">
+                </picture>
+              </div>
+              <div class="structurу__text">
+                Текст
+              </div>
+            </div>  <!--structure__content-->
+
+            <div class="structure__content">
+              <div class="structure__content__img">
+                <picture>
+                  <img src="assets\i\prod.png" alt="">
+                </picture>
+              </div>
+              <div class="structurу__text">
+                Текст
+              </div>
+            </div>  <!--structure__content-->
+
+          </div>  <!--structure-->
+        </div>  <!--structure__blog-->
+
+
+      </div>  <!--block_1__content-->
+    </div>  <!--container-->
+  </div>  <!--block_1-->
+
+
+<!--block_2-->
+<div class="block_2" id="block_2">
+  <div class="container">
+    <div class="block_2__content">
+      Отзывы
+      <div class="slider">
+
+        <!-- spLine -->
+        <ul class="spLine">
+          <li id="sliderRadio0" class="spLine__un__btn active" onclick="Slide0()"> </li>
+          <li id="sliderRadio1" class="spLine__un__btn" onclick="Slide1()"> </li>
+          <li id="sliderRadio2" class="spLine__un__btn" onclick="Slide2()"> </li>
+        </ul> <!--spLine-->
+
+        <!-- slider__line -->
+        <div class="slider__line">
+          <picture class="slider__picture">
+            <source srcset="assets\i\lab2.jpg" media="(max-width: 600px)">
+            <img class="slider__img" src="assets\i\lab.jpg" alt="">
+            <div class="slider__content">
+              <img class="slider__doctor child_1" src="assets\i\doctor.png" alt="">
+              <div class="slder__text__container">
+
+                <div class="slder__name">
+                  Имя специалиста
+                </div>
+                <div class="slder__text">
+                  Соображения высшего порядка, а также дальнейшее развитие различных форм деятельности требует от нас системного анализа модели развития? С другой стороны сложившаяся структура организации позволяет выполнить...
+                </div>
+              </div>  <!-- /slder__text__container -->
+            </div>  <!-- /slider__content -->
+            <a class="slide__pointer" href="#"></a>
+          </picture>  <!-- /slider__picture -->
+
+          <picture class="slider__picture">
+            <source srcset="assets\i\lab2.jpg" media="(max-width: 600px)">
+            <img class="slider__img" src="assets\i\lab.jpg" alt="">
+            <div class="slider__content">
+              <img class="slider__doctor child_1" src="assets\i\doctor.png" alt="">
+              <div class="slder__text__container">
+
+                <div class="slder__name">
+                  Имя специалиста
+                </div>
+                <div class="slder__text">
+                  Соображения высшего порядка, а также дальнейшее развитие различных форм деятельности требует от нас системного анализа модели развития? С другой стороны сложившаяся структура организации позволяет выполнить...
+                </div>
+              </div>  <!-- /slder__text__container -->
+            </div>  <!-- /slider__content -->
+            <a class="slide__pointer" href="#"></a>
+          </picture>
+
+          <picture class="slider__picture">
+            <source srcset="assets\i\lab2.jpg" media="(max-width: 600px)">
+            <img class="slider__img" src="assets\i\lab.jpg" alt="">
+            <div class="slider__content">
+              <img class="slider__doctor child_1" src="assets\i\doctor.png" alt="">
+              <div class="slder__text__container">
+
+                <div class="slder__name">
+                  Имя специалиста
+                </div>
+                <div class="slder__text">
+                  Соображения высшего порядка, а также дальнейшее развитие различных форм деятельности требует от нас системного анализа модели развития? С другой стороны сложившаяся структура организации позволяет выполнить...
+                </div>
+              </div>  <!-- /slder__text__container -->
+            </div>  <!-- /slider__content -->
+            <a class="slide__pointer" href="#"></a>
+          </picture>
+        </div>  <!--intro-->
+      </div>  <!--slider-->
+
+    </div>  <!--block_2__content-->
+  </div>  <!--container-->
+</div>  <!--block_2-->
+
+
+
+
+<!--block_3-->
+<div class="block_3" id="block_3">
+  <div class="container">
+    <div class="block_3__content">
+      Описание
+      <div class="block__3__container">
+        <picture>
+          <img class="block_3_img" src="assets/i/doctor.png" alt="">
+        </picture>
+        <div class="block_3_text">
+          Описание продукта. С другой стороны реализация намеченного плана развития играет важную роль в формировании позиций, занимаемых участниками...
+          <div class="butt block_3_butt">
+            <a href="#footer">
+              Заказать
+            </a>
+          </div>  <!--butt-->
+        </div>  <!--block_3_text-->
+      </div>
+
+      <div class="block_3_characteristic">
+        <ul class="block_3_characteristic__hr">
+          <li>Без вредный</li>
+          <li>Из натуральных ингридиентов</li>
+          <li>Дешевый</li>
+        </ul>
+      </div>  <!--/block_3_characteristic-->
+    </div>  <!--/block_3__content-->
+  </div>  <!--/container-->
+</div>  <!--/block_3-->
+
+<!--footer-->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__content">
+        Заказать
+        <div class="footer__title">
+          LevelUp
+        </div>
+
+        <div class="footer__container">
+          <div class="footer__left">
+
+            <div class="input__name">
+              <input type="text" name="name" required autocomplete="off" value="">
+              <label class="label__name" for="name" >
+                <span>
+                  Имя
+                </span>
+              </label>
+            </div>
+
+            <div class="input__phone">
+              <input type="text" name="phone" onkeypress='validate(event)' required autocomplete="off" value="">
+              <label class="label__phone" for="name" >
+                <span>
+                  Номер телефона
+                </span>
+              </label>
+            </div>
+
+            <div class="butt footer__butt">
+              <a href="#">
+                Заказать
+              </a>
+            </div>
+          </div>  <!--footer__left-->
+
+          <div class="footer__right">
+            <div class="count__down">
+            </div>
+            <div class="footer__price__new">
+              999p
+            </div>
+            <div class="footer__price">
+              1 999p
+            </div>
+            <picture class="footer__product">
+              <img src="assets\i\prod.png" alt="">
+            </picture>
+          </div>  <!--footer__right-->
+        </div>
+
+      </div>  <!--footer__content-->
+    </div>  <!--container-->
+  </footer>
+
+
+
+
+
+
+<!-- =======================================================
+=============================================================-->
+  <script src="assets/js/app.js"></script>
+  <script src="assets\js\slider.js"></script>
+  <script src="assets/js/timer.js"></script>
+
+
+  </body>
+</html>
