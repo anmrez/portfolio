@@ -6,11 +6,20 @@ function openSidebar() {
 
 function link(){
   document.querySelector(".Header__navigation").classList.toggle('open');
+  document.querySelector(".burger__span").classList.toggle('active');
 }
 
 
-
+let name = document.querySelector(".input__name input")
+name.oninput = function(){
+  this.value = this.value.substr(0, 30);
+}
 // input Phone
+let phone = document.querySelector(".input__phone input")
+phone.oninput = function(){
+  this.value = this.value.substr(0, 11);
+}
+
 function validate(evt) {
   var theEvent = evt || window.event;
   var key = theEvent.keyCode || theEvent.which;
