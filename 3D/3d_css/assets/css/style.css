@@ -14,6 +14,7 @@ body{
   perspective: 10em;
   perspective-origin: 50% calc(50% - 2em);
   overflow: hidden;
+  margin: 0;
 }
 
 .scene{

@@ -24,6 +24,8 @@ h1,h2,h3,h5,h4,h6 {margin: 0;}
   /*! background: ; */
 }
 
+
+
 /*=================
 ======Intro========
 ===================*/
@@ -1651,9 +1653,9 @@ max-width: var(--bl9__inner);
 
   .buddle{
      transform: scale(1);
-    
+
   }
-  
+
   .intro__header__navigation__link
   {
     /*! margin-left: 30px; */

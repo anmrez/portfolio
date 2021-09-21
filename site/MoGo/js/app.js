@@ -4,6 +4,10 @@ function openSidebar() {
 
 }
 
+
+
+
+
 //============Acardion============
 
 const Acard = document.querySelectorAll(".blok__5__item__menu");

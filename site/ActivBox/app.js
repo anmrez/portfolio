@@ -19,10 +19,7 @@ link.forEach(link => {
 
 
 
-
-
-
-
+// navigation on button
 document.querySelectorAll('a[href^="#"').forEach(link => {
 
     link.addEventListener('click', function(e) {
@@ -42,11 +39,11 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
         });
     });
 });
+// END navigation on button
 
 
 
-
-// navigation scrollBy
+// navigation scrollBy ===========
 
 const scrollElement = [document.querySelector(".Feathers"),
                       document.querySelector(".work"),
@@ -87,5 +84,6 @@ function navCheck(entries){
 
   scrollElement.forEach(section => {
     obsever.observe(section);
-    console.log(section);
+    // console.log(section);
   })
+// END navigation scrollBy ===========

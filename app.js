@@ -19,6 +19,19 @@ function switching(i){
 }
 
 
+// redirection
+function findSwitch(){
+  let x = 0;
+  const addr = document.location.hash;
+  if (document.location.hash >= "#0/"){
+    x = addr.replace(/\D/g,'');
+    switching(x)
+    history.replaceState('', document.title, window.location.pathname);
+  }
+
+}
+findSwitch()
+// END redirection
 
 
 addEventListener("keydown", function(event) {
@@ -27,13 +40,15 @@ addEventListener("keydown", function(event) {
     switching(0);
   }
 });
+// END navigation
+
+
 
 // random function
-
   function random( min, max ){
     return Math.random() * ( max - min ) + min;
   }
-
+// END random function
 
 
 // neon Vertical
@@ -67,3 +82,4 @@ let x = [];
     neonVertical[j].style.animation = x[j] + 's ease neon3 infinite';
     neonVertical[j].style.animationDelay = random(0, 4) + 's';
   }
+// END neon Vertical

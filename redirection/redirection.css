@@ -1,0 +1,61 @@
+/*==== navigation__phone ========*/
+.nav__phone{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.nav__phone__container{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 300;
+  background: #202430;
+  z-index: 3;
+}
+
+.nav__phone__content{
+  width: 25%;
+  height: 100%;
+  pointer-events: all;
+  cursor: pointer;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .5s;
+  z-index: 555;
+}
+
+.nav__phone__content:hover{
+  /* box-shadow: 0px 0px 30px #2196f3, 0px 0px 15px #2196f3, 0px 0px 5px #2196f3   ,inset 0px 15px 15px #2196f3, inset 0px 10px 10px #2196f3, inset 0px 5px 5px #2196f3; */
+  /* box-shadow: 0px 0px 15px #2196f3 ,inset 0px 0px 15px #2196f3; */
+}
+.nav__active{
+  box-shadow: 0px 0px 5px #2196f3   ,inset 0px 0px 5px #2196f3;
+}
+
+
+.nav__phone__content picture{
+  width: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav__phone__content picture, .nav__phone__content picture svg{
+  height: 80%;
+}
+.nav__phone__content picture svg, .nav__phone__content picture svg path{
+  fill: #4b9deb !important;
+}
+.nav__active picture svg, .nav__active picture svg path{
+  fill: #2267f2 !important;
+}
