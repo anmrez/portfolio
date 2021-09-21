@@ -1,3 +1,6 @@
+  // import Stats from './assets/js/gui/stats.module.js';
+	// import { GUI } from './assets/js/gui/dat.gui.module.js';
+
 let container;
 let camera;
 let renderer;
@@ -40,48 +43,48 @@ const sW1 = sceneWidth / 2;
 const textureLoader = new THREE.TextureLoader();
 
 // light
-// let hlight = new THREE.AmbientLight (0x404040, 0.1);
-// scene.add(hlight);
+let hlight = new THREE.AmbientLight (0x404040, 3);
+scene.add(hlight);
 
 // street
 {
   const streetGeo = new THREE.PlaneGeometry( sceneWidth/3, 4, 20, 20 )
   // const tilesBaseColor = textureLoader.load('assets/texture/1K-asphalt_11_Diffuse.jpg');
   const streetMaterial = new THREE.MeshStandardMaterial( {
-    color: 0x000000
-    // side: THREE.DoubleSide
+    color: 0x000000,
+    side: THREE.DoubleSide
     // map: tilesBaseColor,
   } );
 
-
+  let z = 2;
   const street_1 = new THREE.Mesh( streetGeo, streetMaterial );
   street_1.rotation.x = Math.PI * -0.5;
-  street_1.position.set( sceneWidth/3, 0, 2)
+  street_1.position.set( sceneWidth/3, 0, z)
   scene.add( street_1 );
 
   const street_2 = new THREE.Mesh( streetGeo, streetMaterial );
   street_2.rotation.x = Math.PI * -0.5;
-  street_2.position.set( -sceneWidth/3, 0, 2)
+  street_2.position.set( -sceneWidth/3, 0, z)
   scene.add( street_2 );
 
   const street_3 = new THREE.Mesh( streetGeo, streetMaterial );
   street_3.rotation.x = Math.PI * -0.5;
-  street_3.position.set( 0, 0, 2)
+  street_3.position.set( 0, 0, z)
   scene.add( street_3 );
 
   const street_4 = new THREE.Mesh( streetGeo, streetMaterial );
   street_4.rotation.x = Math.PI * -0.5;
-  street_4.position.set( sceneWidth/3, 0, -2)
+  street_4.position.set( sceneWidth/3, 0, -z)
   scene.add( street_4 );
 
   const street_5 = new THREE.Mesh( streetGeo, streetMaterial );
   street_5.rotation.x = Math.PI * -0.5;
-  street_5.position.set( -sceneWidth/3, 0, -2)
+  street_5.position.set( -sceneWidth/3, 0, -z)
   scene.add( street_5 );
 
   const street_6 = new THREE.Mesh( streetGeo, streetMaterial );
   street_6.rotation.x = Math.PI * -0.5;
-  street_6.position.set( 0, 0, -2)
+  street_6.position.set( 0, 0, -z)
   scene.add( street_6 );
 
 }
@@ -101,25 +104,130 @@ const textureLoader = new THREE.TextureLoader();
   }
 }
 
+//plate beach
+{
+  const beachGeo = new THREE.PlaneBufferGeometry(20, 8, 20, 20);
+  // const beachGeo = new THREE.PlaneBufferGeometry(sceneWidth/3, 4, 20, 20);
+  const tilesBaseColor = textureLoader.load('assets/texture/tant2.jpg');
+  const beachMaterial = new THREE.MeshPhongMaterial( {
+    // color: 0x606118
+    side: THREE.DoubleSide,
+    map: tilesBaseColor,
+    // wireframe: true,
+  } );
+  let beachPos = beachGeo.getAttribute("position");
+  let beachPa = beachPos.array;
+  // console.log(beachPa);
+
+  let beachArray = []
+  for (let i = 2; i < beachPa.length; i += 3){
+    beachPa[i] = random(0, 0.2)
+  }
+  // console.log(beachPa);
+  // console.log(beachArray);
+
+  let z = 10;
+
+  const beach = new THREE.Mesh( beachGeo, beachMaterial );
+  beach.rotation.x = Math.PI*1.55;
+  beach.position.set( 0, -0.65, z-2.1)
+  scene.add( beach );
+
+  // const beach_1 = new THREE.Mesh( beachGeo, beachMaterial );
+  // beach_1.rotation.x = Math.PI * -0.5;
+  // beach_1.position.set( sceneWidth/3, 0, z)
+  // scene.add( beach_1 );
+  //
+  // const beach_2 = new THREE.Mesh( beachGeo, beachMaterial );
+  // beach_2.rotation.x = Math.PI * -0.5;
+  // beach_2.position.set( -sceneWidth/3, 0, z)
+  // scene.add( beach_2 );
+  //
+  // const beach_3 = new THREE.Mesh( beachGeo, beachMaterial );
+  // beach_3.rotation.x = Math.PI * -0.5;
+  // beach_3.position.set( 0, 0, z)
+  // scene.add( beach_3 );
+  //
+  // const beach_4 = new THREE.Mesh( beachGeo, beachMaterial );
+  // beach_4.rotation.x = Math.PI * -0.5;
+  // beach_4.position.set( sceneWidth/3, 0, z-4)
+  // scene.add( beach_4 );
+  //
+  // const beach_5 = new THREE.Mesh( beachGeo, beachMaterial );
+  // beach_5.rotation.x = Math.PI * -0.5;
+  // beach_5.position.set( -sceneWidth/3, 0, z-4)
+  // scene.add( beach_5 );
+  //
+  // const beach_6 = new THREE.Mesh( beachGeo, beachMaterial );
+  // beach_6.rotation.x = Math.PI * -0.5;
+  // beach_6.position.set( 0, 0, z-4)
+  // scene.add( beach_6 );
+
+}
+
+//plate test
+//
+//   const geometry = new THREE.PlaneBufferGeometry(2, 2, 10, 10);
+//
+//   let pos = geometry.getAttribute("position");
+//   let pa = pos.array;
+//   // console.log(pa);
+//
+//   // for (let i = 2; i < pa.length; i += 3){
+//   //   pa[i] += random(0, 0.1);
+//   // }
+//   // console.log(pa);
+//   const material = new THREE.MeshPhongMaterial( {
+//     color: 0xcccccc,
+//     side: THREE.DoubleSide,
+//     wireframe: true,
+//   } );
+//   const mesh = new THREE.Mesh( geometry, material );
+//   mesh.rotation.x = Math.PI/2
+//   mesh.position.set(0, 2, 0)
+//   scene.add( mesh )
+//
+//     for (let i = 2; i < pa.length; i += 3){
+//       pa[i] += random(0, 0.1);
+//     }
+//
+//
+//   // const count: number = geometry.getAttributes("position").count
+//   // console.log(count);
+// function water(){
+//     const now = Date.now() / 300;
+//     for (let i = 0; i < 121; i++){
+//       const x = geometry.getAttribute("position").getX(i);
+//       const y = geometry.getAttribute("position").getY(i);
+//       const xsin = Math.sin( x + now);
+//       const ycox = Math.sin( y + now);
+//       geometry.getAttribute("position").getZ(i, xsin)
+//     }
+//
+//     geometry.computeVertexNormals();
+//     geometry.getAttribute("position").needsUpdate = true
+//   }
+
+
 
 // sidewalk
-// {
-//   for (let x = sW0; x < sW1; x += 1){
-//     const geometry = new THREE.BoxGeometry ( 0.95, 0.05, 0.95  );
-//     // const tilesBaseColor = textureLoader.load('assets/texture/sidewalk.jpg');
-//     const material = new THREE.MeshBasicMaterial( {
-//       color: 0x828282
-//       // map: tilesBaseColor
-//     } );
-//     const sidewalk1 = new THREE.Mesh( geometry, material );
-//     sidewalk1.position.set ( x + 0.5, 0.05, -2.4 );
-//     scene.add( sidewalk1 );
-//
-//     const sidewalk2 = new THREE.Mesh( geometry, material );
-//     sidewalk2.position.set ( x + 0.5, 0.05, -3.4 );
-//     scene.add( sidewalk2 );
-//   }
-// }
+{
+  for (let x = sW0; x < sW1; x += 1){
+    const geometry = new THREE.BoxGeometry ( 0.95, 0.05, 0.95  );
+    // const tilesBaseColor = textureLoader.load('assets/texture/sidewalk.jpg');
+    const material = new THREE.MeshBasicMaterial( {
+      color: 0x828282
+      // map: tilesBaseColor
+    } );
+    const sidewalk1 = new THREE.Mesh( geometry, material );
+    sidewalk1.position.set ( x + 0.5, 0.05, -2.4 );
+    scene.add( sidewalk1 );
+
+    const sidewalk2 = new THREE.Mesh( geometry, material );
+    sidewalk2.position.set ( x + 0.5, 0.05, -3.4 );
+    scene.add( sidewalk2 );
+  }
+}
 
 // building
 // {
@@ -212,25 +320,25 @@ const loader = new THREE.GLTFLoader();
   for (let x = sW0 + 1; x < sW1; x += 5){
     loader.load('assets/3d_models/street_lamp.glb', lamp);
     function lamp(gltf){
-      const pointLightX1 = new THREE.PointLight( 0xffffff, 1, 2 );
-      pointLightX1.position.set( x+0.5, 2, -2 );
-      scene.add( pointLightX1 );
-
-      const pointLightX2 = new THREE.PointLight( 0xffffff, 1, 2 );
-      pointLightX2.position.set( x-0.5, 2, -2 );
-      scene.add( pointLightX2 );
-
-      const pointLightZ1 = new THREE.PointLight( 0xffffff, 1, 2 );
-      pointLightZ1.position.set( x, 2, -1.5 );
-      scene.add( pointLightZ1 );
-
-      const pointLightZ2 = new THREE.PointLight( 0xffffff, 1, 2 );
-      pointLightZ2.position.set( x, 2, -2.5 );
-      scene.add( pointLightZ2 );
-
-      const pointLightY = new THREE.PointLight( 0xffffff, 1, 4 );
-      pointLightY.position.set( x, 1, -2 );
-      scene.add( pointLightY );
+      // const pointLightX1 = new THREE.PointLight( 0xffffff, 1, 2 );
+      // pointLightX1.position.set( x+0.5, 2, -2 );
+      // scene.add( pointLightX1 );
+      //
+      // const pointLightX2 = new THREE.PointLight( 0xffffff, 1, 2 );
+      // pointLightX2.position.set( x-0.5, 2, -2 );
+      // scene.add( pointLightX2 );
+      //
+      // const pointLightZ1 = new THREE.PointLight( 0xffffff, 1, 2 );
+      // pointLightZ1.position.set( x, 2, -1.5 );
+      // scene.add( pointLightZ1 );
+      //
+      // const pointLightZ2 = new THREE.PointLight( 0xffffff, 1, 2 );
+      // pointLightZ2.position.set( x, 2, -2.5 );
+      // scene.add( pointLightZ2 );
+      //
+      // const pointLightY = new THREE.PointLight( 0xffffff, 1, 4 );
+      // pointLightY.position.set( x, 1, -2 );
+      // scene.add( pointLightY );
 
       gltf.scene.scale.set( 0.1, 0.1, 0.1 );
       gltf.scene.position.set( x, 0, -2)
@@ -242,41 +350,35 @@ const loader = new THREE.GLTFLoader();
 // /lamp
 
 
-// bench
-{
-  loader.load('assets/3d_models/bench.glb', benchBlender, loading );
-  function benchBlender(gltf){
-    gltf.scene.scale.set( 0.18, 0.18, 0.18 );
-    gltf.scene.rotation.y = Math.PI /2
-    let x = random( -sceneWidth/2+1, sceneWidth/2-1)
-    gltf.scene.position.set( x, 0.35, -3.45)
-    scene.add( gltf.scene );
-  }
-  let loadText = document.querySelector(".Load");
-  function loading(xhr ){
-    let lo = xhr.loaded / xhr.total * 100
-    // console.log( lo + '% loaded' );
-    loadText.textContent = Math.floor(lo) + "% Loading...";
-    if ( lo >= 100 ){
-      const preload = document.querySelector(".Pre-loader");
-      preload.classList.add('finish');
-    }
-  }
-}
-// /bench
 
 
 // Border
 {
   let groupBorder = new THREE.Group();
-  for (let x = sW0 + 0.5; x < sW1; x += 0.7){
-    loader.load('assets/3d_models/border2.glb', borderBlender );
+  for (let x = sW0 + 0.5; x < sW1; x += 0.75){
+    loader.load('assets/3d_models/border3.glb', borderBlender );
     function borderBlender(gltf){
-      gltf.scene.scale.set( 0.2, 0.2, 0.2 );
+      gltf.scene.scale.set( 0.3, 0.3, 0.3 );
       // gltf.scene.rotation.y = 1.55
       // let x = random( -sceneWidth/2+1, sceneWidth/2-1)
-      gltf.scene.rotation.y = Math.PI * 1.5;
+      gltf.scene.rotation.y = Math.PI * 1;
       gltf.scene.position.set( x, 0.1, -1.8)
+      groupBorder.add ( gltf.scene )
+      // animate();
+    }
+  } // load Border
+  scene.add( groupBorder );
+}
+{
+  let groupBorder = new THREE.Group();
+  for (let x = sW0 + 0.5; x < sW1; x += 0.75){
+    loader.load('assets/3d_models/border3.glb', borderBlender );
+    function borderBlender(gltf){
+      gltf.scene.scale.set( 0.3, 0.3, 0.3 );
+      // gltf.scene.rotation.y = 1.55
+      // let x = random( -sceneWidth/2+1, sceneWidth/2-1)
+      gltf.scene.rotation.y = Math.PI * 1;
+      gltf.scene.position.set( x, 0.1, 4)
       groupBorder.add ( gltf.scene )
       // animate();
     }
@@ -319,10 +421,34 @@ const loader = new THREE.GLTFLoader();
 // /Plate
 
 
+// bench
+{
+  loader.load('assets/3d_models/bench.glb', benchBlender, loading );
+  function benchBlender(gltf){
+    gltf.scene.scale.set( 0.18, 0.18, 0.18 );
+    gltf.scene.rotation.y = Math.PI /2
+    let x = random( -sceneWidth/2+1, sceneWidth/2-1)
+    gltf.scene.position.set( x, 0.35, -3.45)
+    scene.add( gltf.scene );
+  }
+  let loadText = document.querySelector(".Load");
+  function loading(xhr){
+    let lo = xhr.loaded / xhr.total * 100
+    // console.log( lo + '% loaded' );
+    loadText.textContent = Math.floor(lo) + "% Loading...";
+    if ( lo >= 100 )
+    document.querySelector(".Pre-loader").classList.add('finish');
+
+  }
+}
+// /bench
+
 
 //=============================================================================
 // animation  ================
 function animate() {
+
+
 
   controls.update();
 
