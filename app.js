@@ -5,18 +5,17 @@ let page = [
             document.querySelector('.page__picture'),
             document.querySelector('.page__3d')
           ];
-const btnHome = document.querySelector('.button__home__container a')
+
+const btnNav = document.querySelectorAll('.nav__phone__content');
 
 function switching(i){
-  for ( let j = 0;  j < 4;  j++){
+  for ( let j = 0;  j < page.length;  j++){
     page[j].classList.remove("page__open");
+    btnNav[j].classList.remove("nav__active");
   }
   page[i].classList.add("page__open")
-  if (page[i] != document.querySelector('.page__home')){
-    btnHome.classList.add("page__open")
-  } else {
-    btnHome.classList.remove("page__open")
-  }
+  btnNav[i].classList.add("nav__active");
+
 }
 
 
