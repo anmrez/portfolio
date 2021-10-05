@@ -63,6 +63,7 @@ function navCheck(entries){
   entries.forEach(entry =>{
     const className = entry.target.className;
     const activeAnchor = document.querySelector(`[data-page=${className}]`)
+    console.log(activeAnchor);
     const coords = activeAnchor.getBoundingClientRect();
     const directions = {
         height: coords.height,

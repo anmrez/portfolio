@@ -2,7 +2,7 @@
 let page = [
             document.querySelector('.page__home'),
             document.querySelector('.page__site'),
-            document.querySelector('.page__picture'),
+            // document.querySelector('.page__picture'),
             document.querySelector('.page__3d')
           ];
 

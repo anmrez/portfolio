@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Flaby</title>
+    <meta name="viewport" content="width=device-width, initeal-scale=1">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+
+    <!-- Font -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&family=Raleway:wght@500;600&display=swap" rel="stylesheet">
+    <!-- /Font -->
+
+
+
+</head>
+<body>
+<!--sprite-->
+<svg style="display: none;">
+    <symbol id="arrow" viewBox="0 0 35 17" enable-background="new 0 0 64 64">
+      <path  data-name="arrow icon" d="M903.769,3794.95l-7.956-7.72a0.8,0.8,0,0,0-.562-0.23,0.786,0.786,0,0,0-.8.77,0.757,0.757,0,0,0,.234.55l6.6,6.41H869.794a0.77,0.77,0,1,0,0,1.54h31.492l-6.6,6.41a0.757,0.757,0,0,0-.234.55,0.786,0.786,0,0,0,.8.77,0.8,0.8,0,0,0,.562-0.23l7.956-7.72A0.766,0.766,0,0,0,903.769,3794.95Z" transform="translate(-869 -3787)"/>
+    </symbol>
+    <symbol id="facebook" viewBox="0 0 24 24">
+      <path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/>
+    </symbol>
+
+    <symbol id="twitter" viewBox="0 0 512 512" >
+      <path d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+  c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
+  c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
+  c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
+  c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
+  c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
+  C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
+  C480.224,136.96,497.728,118.496,512,97.248z"/>
+      </symbol>
+
+      <symbol id="telegramm" viewBox="0 -39 512.00011 512" >
+        <path d="m504.09375 11.859375c-6.253906-7.648437-15.621094-11.859375-26.378906-11.859375-5.847656 0-12.042969 1.230469-18.410156 3.664062l-433.398438 165.441407c-23 8.777343-26.097656 21.949219-25.8984375 29.019531s4.0390625 20.046875 27.4999995 27.511719c.140626.042969.28125.085937.421876.125l89.898437 25.726562 48.617187 139.023438c6.628907 18.953125 21.507813 30.726562 38.835938 30.726562 10.925781 0 21.671875-4.578125 31.078125-13.234375l55.605469-51.199218 80.652344 64.941406c.007812.007812.019531.011718.027343.019531l.765625.617187c.070313.054688.144532.113282.214844.167969 8.964844 6.953125 18.75 10.625 28.308594 10.628907h.003906c18.675781 0 33.546875-13.824219 37.878906-35.214844l71.011719-350.640625c2.851563-14.074219.460937-26.667969-6.734375-35.464844zm-356.191406 234.742187 173.441406-88.605468-107.996094 114.753906c-1.769531 1.878906-3.023437 4.179688-3.640625 6.683594l-20.824219 84.351562zm68.132812 139.332032c-.71875.660156-1.441406 1.25-2.164062 1.792968l19.320312-78.25 35.144532 28.300782zm265.390625-344.566406-71.011719 350.644531c-.683593 3.355469-2.867187 11.164062-8.480468 11.164062-2.773438 0-6.257813-1.511719-9.824219-4.257812l-91.390625-73.585938c-.011719-.011719-.027344-.023437-.042969-.03125l-54.378906-43.789062 156.175781-165.949219c5-5.3125 5.453125-13.449219 1.074219-19.285156-4.382813-5.835938-12.324219-7.671875-18.820313-4.351563l-256.867187 131.226563-91.121094-26.070313 433.265625-165.390625c3.660156-1.398437 6.214844-1.691406 7.710938-1.691406.917968 0 2.550781.109375 3.15625.855469.796875.972656 1.8125 4.289062.554687 10.511719zm0 0"/>
+    </symbol>
+</svg>
+
+<!--header-->
+  <header class="header">
+    <section class="container">
+      <section class="Header__content">
+        <picture class="Header__placeholder">
+          <img src="assets\i\logo.svg" alt="">
+        </picture>
+        <section class="Burger" onclick="openSidebar()">
+          <span class="burger__span"></span>
+
+        </section>
+          <section class="Header__navigation">
+            <div class="buddle"> </div>
+            <a href="#intro" class="Header__link" onclick="link()" data-page="intro">
+              <section class="">
+                Home
+              </section>
+            </a>
+            <a href="#block_1" class="Header__link" onclick="link()" data-page="block_1">
+              <section class="">
+                services
+              </section>
+            </a>
+            <a href="#block_2" class="Header__link" onclick="link()" data-page="block_2">
+              <section class="">
+                portfolio
+              </section>
+             </a>
+            <a href="#block_3" class="Header__link" onclick="link()" data-page="block_3">
+              <section class="">
+                blog
+              </section>
+             </a>
+            <a href="#block_6" class="Header__link" onclick="link()" data-page="block_6">
+              <section class="">
+                contact us
+              </section>
+             </a>
+             <a href="" class="Header__link">
+               <section class="">
+                 login
+               </section>
+              </a>
+          </section>  <!--Header__navigation-->
+      </section>  <!--Header__content-->
+    </section>  <!--container-->
+  </header>
+
+
+
+<!--intro-->
+  <section class="intro" id="intro">
+    <section class="container__H">
+      <section class="intro__content">
+        <div class="intro__ellipce1">
+          <div class="intro__ellipce2">
+            <div class="intro__ellipce3">
+              <div class="intro__ellipce4">
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <img class="Earphones" src="assets\i\Earphones.png" alt="">
+        <img class="Headphones" src="assets\i\Headphones.png" alt="">
+        <img class="Pencil" src="assets\i\Pencil.png" alt="">
+        <img class="place" src="assets\i\place_image.png" alt="">
+
+        <div class="intro__container">
+          <div class="intro__container2">
+            <div class="intro__text__title">
+              Flat <p>+</p> Free <p>=</p> Flaby
+            </div>
+            <div class="intro__text__subtitle">
+              A Modern Flat design corporate template <br>
+              for free download with all great features <br>
+              and trendy look.
+              <div class="intro__buttons">
+                <div class="intro__buttons__GP button">
+                  <picture>
+                    <img src="assets\i\block__1\google_play.svg" alt="">
+                  </picture>
+                  <div class="">
+                    Google Store
+                  </div>
+                </div>
+                <div class="intro__buttons__LM button">
+                    <div class="">
+                      Learn More
+                    </div>
+                  </div>
+              </div>  <!--intro__buttons-->
+            </div>  <!--intro__text__subtitle-->
+
+          </div>  <!--intro__content-->
+        </div>  <!--intro__content-->
+
+
+
+      </section>  <!--intro__content-->
+    </section>  <!--container-->
+  </section>  <!--intro-->
+
+
+<!--block_1-->
+  <section class="block_1" id="block_1">
+    <section class="container">
+      <section class="block_1__content">
+        <header class="heading__block">
+          <div class="heading__title">
+            Welcome to
+          </div>
+          <div class="heading__subtitle">
+            our sevices
+          </div>
+        </header>
+
+        <div class="block__1__container">
+          <div class="block__1__box">
+            <picture>
+              <img src="assets\i\block__1\img__1.png" alt="">
+            </picture>
+            <div class="block__1__box__title">
+              Web Development
+            </div>
+            <div class="block__1__box__subtitle">
+              There are many variations of passages of Lorem  Ipsum available,  the majorityalteration make  difficult
+            </div>
+          </div>  <!--block__1__box-->
+
+
+          <div class="block__1__box">
+            <picture>
+              <img src="assets\i\block__1\img__2.png" alt="">
+            </picture>
+            <div class="block__1__box__title">
+              Photography
+            </div>
+            <div class="block__1__box__subtitle">
+              There are many variations of passages of Lorem  Ipsum available,  the majorityalteration make  difficult
+            </div>
+          </div>  <!--block__1__box-->
+
+
+          <div class="block__1__box">
+            <picture>
+              <img src="assets\i\block__1\img__3.png" alt="">
+            </picture>
+            <div class="block__1__box__title">
+              Vector Artist
+            </div>
+            <div class="block__1__box__subtitle">
+              There are many variations of passages of Lorem  Ipsum available,  the majorityalteration make  difficult
+            </div>
+          </div>  <!--block__1__box-->
+
+
+        </div>   <!--block__1__container-->
+
+
+
+      </section>  <!--block_1__content-->
+    </section>  <!--container-->
+  </section>  <!--block_1-->
+  <div class="block_1__content2">
+    <picture>
+      <img src="assets\i\block__1\iPhone.png" alt="">
+    </picture>
+    <div class="block__1__container2">
+      <h2 class="block__1__container2__title">
+        We have great features with
+      </h2>
+      <h1 class="block__1__container2__subtitle">
+        Unlimited Customization Features
+      </h1>
+      <h3 class="block__1__container2__text">
+        There are many variations of passages of Lorem Ipsum available,  the majorityalteration make difficult
+      </h3>
+      <div class="block__1__container2__list__box">
+        <div class="block__1__container2__list">
+          <div class="block__1__container2__list__target"> </div>
+          <div class="block__1__container2__list__text">
+            More wordpress featrures with great responsive design.
+          </div>
+        </div>
+
+        <div class="block__1__container2__list">
+          <div class="block__1__container2__list__target"> </div>
+          <div class="block__1__container2__list__text">
+            Corporate flat design with necessary elements.
+          </div>
+        </div>
+
+        <div class="block__1__container2__list">
+          <div class="block__1__container2__list__target"> </div>
+          <div class="block__1__container2__list__text">
+            Free vector shape and mockup by great designer.
+          </div>
+        </div>
+
+        <div class="block__1__container2__list">
+          <div class="block__1__container2__list__target"> </div>
+          <div class="block__1__container2__list__text">
+            Full one page flat and modern trend following goods.
+          </div>
+        </div>
+
+
+      </div>  <!--block__1__container2__list__box-->
+
+      <div class="block__1__container2__button">
+        <div class="">
+          Read More
+        </div>
+      </div>
+
+    </div>  <!--block__1__container2-->
+  </div>  <!--block_1__content2-->
+
+
+<!--block_2-->
+  <section class="block_2" id="block_2">
+    <section class="container">
+      <section class="block_2__content">
+        <header class="heading__block">
+          <div class="heading__title">
+            View Our Latest
+          </div>
+          <div class="heading__subtitle">
+            other services
+          </div>
+        </header>
+
+        <div class="block__2__container">
+
+          <!--element_1-->
+          <div class="block__2__element">
+            <picture>
+              <img src="assets\i\block__2\icon.png" alt="">
+            </picture>
+            <div class="block__2__element__content">
+
+              <div class="block__2__element__title">
+                Idea Developing
+              </div>
+              <div class="block__2__element__text">
+                There are many variations of passages of Lorem Ipsum available, but the majorityalteration in some form with design
+              </div>
+            </div>  <!--block__2__element__content-->
+          </div>  <!--block__2__element-->
+
+          <!--element_2-->
+          <div class="block__2__element">
+            <picture>
+              <img src="assets\i\block__2\Browser.png" alt="">
+            </picture>
+            <div class="block__2__element__content">
+
+              <div class="block__2__element__title">
+                Best Coding
+              </div>
+              <div class="block__2__element__text">
+                There are many variations of passages of Lorem Ipsum available, but the majorityalteration in some form with design
+              </div>
+            </div>  <!--block__2__element__content-->
+          </div>  <!--block__2__element-->
+
+          <!--element_3-->
+          <div class="block__2__element">
+            <picture>
+              <img src="assets\i\block__2\Game.png" alt="">
+            </picture>
+            <div class="block__2__element__content">
+
+              <div class="block__2__element__title">
+                Game Design
+              </div>
+              <div class="block__2__element__text">
+                There are many variations of passages of Lorem Ipsum available, but the majorityalteration in some form with design
+              </div>
+            </div>  <!--block__2__element__content-->
+          </div>  <!--block__2__element-->
+
+          <!--element_4-->
+          <div class="block__2__element">
+            <picture>
+              <img src="assets\i\block__2\ResizeDown.png" alt="">
+            </picture>
+            <div class="block__2__element__content">
+
+              <div class="block__2__element__title">
+                Responsive Design
+              </div>
+              <div class="block__2__element__text">
+                There are many variations of passages of Lorem Ipsum available, but the majorityalteration in some form with design
+              </div>
+            </div>  <!--block__2__element__content-->
+          </div>  <!--block__2__element-->
+
+          <!--element_5-->
+          <div class="block__2__element">
+            <picture>
+              <img src="assets\i\block__2\Cart.png" alt="">
+            </picture>
+            <div class="block__2__element__content">
+
+              <div class="block__2__element__title">
+                Free Shopping
+              </div>
+              <div class="block__2__element__text">
+                There are many variations of passages of Lorem Ipsum available, but the majorityalteration in some form with design
+              </div>
+            </div>  <!--block__2__element__content-->
+          </div>  <!--block__2__element-->
+
+          <!--element_6-->
+          <div class="block__2__element">
+            <picture>
+              <img src="assets\i\block__2\Gift.png" alt="">
+            </picture>
+            <div class="block__2__element__content">
+
+              <div class="block__2__element__title">
+                Bonus Download
+              </div>
+              <div class="block__2__element__text">
+                There are many variations of passages of Lorem Ipsum available, but the majorityalteration in some form with design
+              </div>
+            </div>  <!--block__2__element__content-->
+          </div>  <!--block__2__element-->
+
+
+        </div>  <!--block__2__container-->
+
+      </section>  <!--block_2__content-->
+    </section>  <!--container-->
+  </section>  <!--block_2-->
+
+
+<!--block_3-->
+  <section class="block_3" id="block_3">
+    <section class="container">
+      <section class="block_3__content">
+        <header class="heading__block">
+          <div class="heading__title">
+            Get know About
+          </div>
+          <div class="heading__subtitle">
+            what customer say
+          </div>
+        </header>
+
+        <div class="block_3__container">
+          <div class="block_3__list slide__active">
+            <div class="block_3__list__content">
+              <div class="block_3__list__author">
+                <picture>
+                  <img src="assets\i\block__3\author image.svg" alt="">
+                </picture>
+                <div class="block_3__list__author__name">
+                  Sourabh A.
+                </div>
+                <div class="block_3__list__author__subname">
+                  Co Founder of Mew
+                </div>
+              </div>
+              <div class="block_3__list__text">
+                Great Team with great experience, i would reguler recommended to all that you will get better support by working with this awesome team and their expert members :)
+              </div>
+            </div>
+          </div>
+
+          <div class="block_3__list">
+            <div class="block_3__list__content">
+              <div class="block_3__list__author">
+                <picture>
+                  <img src="assets\i\block__3\author image.svg" alt="">
+                </picture>
+                <div class="block_3__list__author__name">
+                  Sourabh B.
+                </div>
+                <div class="block_3__list__author__subname">
+                  Co Founder of Mew
+                </div>
+              </div>
+              <div class="block_3__list__text">
+                Great Team with great experience, i would reguler recommended to all that you will get better support by working with this awesome team and their expert members :)
+              </div>
+            </div>
+          </div>
+
+          <div class="block_3__list">
+            <div class="block_3__list__content">
+              <div class="block_3__list__author">
+                <picture>
+                  <img src="assets\i\block__3\author image.svg" alt="">
+                </picture>
+                <div class="block_3__list__author__name">
+                  Sourabh C.
+                </div>
+                <div class="block_3__list__author__subname">
+                  Co Founder of Mew
+                </div>
+              </div>
+              <div class="block_3__list__text">
+                Great Team with great experience, i would reguler recommended to all that you will get better support by working with this awesome team and their expert members :)
+              </div>
+            </div>
+          </div>
+
+          <div class="block_3__buttons">
+
+            <div class="block_3__buttons__previous" onclick="previous()">
+              <svg class="block_3__buttons__arrow_l">
+                <Use xlink:href="#arrow"> </Use>
+              </svg>
+              Previous
+            </div>
+
+            <div class="block_3__buttons__next" onclick="next()">
+              Next
+                <svg class="block_3__buttons__arrow">
+                  <Use xlink:href="#arrow"> </Use>
+                </svg>
+            </div>
+
+          </div>  <!--/block_3__buttons-->
+        </div>  <!--/block_3__container-->
+
+
+      </section>  <!--/block_3__content-->
+    </section>  <!--/container-->
+  </section>  <!--/block_3-->
+
+
+<!--block_4-->
+  <section class="block_4" id="block_4">
+    <section class="container">
+      <section class="block_4__content">
+        <div class="block_4__text">
+          <h2>
+            Feel free to download our
+          </h2>
+          <h1>
+            Great Resourse for free
+          </h1>
+          <h3>
+            There are many variations of paassages of Lorem Ipsum available & majorityalteration
+          </h3>
+          <div>
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+          </div>
+        </div>
+        <div class="block_4__img">
+          <picture>
+            <img src="assets\i\block__4\mockup.svg" alt="">
+          </picture>
+        </div>
+
+      </section>  <!--/block_4__content-->
+    </section>  <!--/container-->
+  </section>  <!--/block_4-->
+
+
+<!--block_5-->
+  <section class="block_5" id="block_5">
+    <section class="container">
+      <section class="block_5__content">
+        <header class="heading__block">
+          <div class="heading__title">
+            Get Idea About
+          </div>
+          <div class="heading__subtitle">
+            Pricing plan
+          </div>
+        </header>
+
+        <div class="block__5__cart__container">
+
+          <div class="block__5__cart">
+            <picture>
+              <img src="assets\i\block__5\Book.png" alt="">
+            </picture>
+            <div class="block__5__cart__name">
+              Student
+            </div>
+            <div class="block__5__cart__price">
+              <p>$</p>
+              <p>39</p>
+              <p>/mo</p>
+            </div>
+            <div class="block__5__cart__list">
+              <p class="list_active"> 6 GB storage </p>
+              <p class="list_active"> Fast Brandwidht </p>
+              <p> Responsive </p>
+              <p> Customization </p>
+            </div>
+            <div class="block__5__cart__button">
+              sign up
+            </div>
+          </div>  <!--/block__5__cart-->
+
+
+          <div class="block__5__cart">
+            <picture>
+              <img src="assets\i\block__5\bag.png" alt="">
+            </picture>
+            <div class="block__5__cart__name">
+              Proffesional
+            </div>
+            <div class="block__5__cart__price">
+              <p>$</p>
+              <p>59</p>
+              <p>/mo</p>
+            </div>
+            <div class="block__5__cart__list">
+              <p class="list_active"> 6 GB storage </p>
+              <p class="list_active"> Fast Brandwidht </p>
+              <p class="list_active" class="list_active"> Responsive </p>
+              <p> Customization </p>
+            </div>
+            <div class="block__5__cart__button">
+              sign up
+            </div>
+          </div>  <!--/block__5__cart-->
+
+
+          <div class="block__5__cart">
+            <picture>
+              <img src="assets\i\block__5\shopping Bag.png" alt="">
+            </picture>
+            <div class="block__5__cart__name">
+              Unlimited
+            </div>
+            <div class="block__5__cart__price">
+              <p>$</p>
+              <p>99</p>
+              <p>/mo</p>
+            </div>
+            <div class="block__5__cart__list">
+              <p class="list_active"> 6 GB storage </p>
+              <p class="list_active"> Fast Brandwidht </p>
+              <p class="list_active"> Responsive </p>
+              <p class="list_active"> Customization </p>
+            </div>
+            <div class="block__5__cart__button">
+              sign up
+            </div>
+          </div>
+
+
+        </div>  <!--/block__5__cart-->
+
+
+      </section>  <!--/block_5__content-->
+    </section>  <!--/container-->
+  </section>  <!--/block_5-->
+
+
+<!--block_6-->
+  <section class="block_6" id="block_6">
+    <section class="container">
+      <section class="block_6__content">
+        <header class="heading__block">
+          <div class="heading__title">
+            For latest newsletter
+          </div>
+          <div class="heading__subtitle">
+            Subscribe now
+          </div>
+        </header>
+        <div class="block_6__container">
+
+          <section class="input">
+              <section class="input__name">
+                <input type="text" name="name"  required autocomplete="off" value="">
+                <label class="label__name" for="name" >
+                  <span>
+                    Name
+                  </span>
+                </label>
+              </section>
+
+              <section class="input__phone">
+                <input type="text" name="phone" required autocomplete="off" value="">
+                <label class="label__phone" for="name" >
+                  <span>
+                    E-mail
+                  </span>
+                </label>
+              </section>
+
+            </section>  <!--footer__left-->
+
+            <div class="block__5__cart__button btn_clock_6">
+              subscribe
+            </div>
+          </div>
+
+      </section>  <!--/block_5__content-->
+    </section>  <!--/container-->
+  </section>  <!--/block_5-->
+
+<!--footer-->
+  <footer class="footer" >
+    <section class="container ft_cont">
+      <section class="footer__content">
+        <div class="foother__logo">
+          <picture>
+            <img src="assets\i\logo.svg" alt="">
+          </picture>
+          <div class="foother__logo__text">
+            Flaby is a free flat template and
+            available for free downloads
+            but please don’t use for sell
+          </div>
+          <div class="foother__logo__icon">
+            <a href="#" class="social__item" target="_blank">
+             <svg class="social__icon">
+               <Use xlink:href="#facebook"> </Use>
+             </svg>
+           </a>
+
+           <a href="#" class="social__item">
+             <svg class="social__icon">
+               <Use xlink:href="#twitter"> </Use>
+             </svg>
+           </a>
+
+           <a href="#" class="social__item">
+             <svg class="social__icon">
+               <Use xlink:href="#telegramm"> </Use>
+             </svg>
+           </a>
+
+          </div>
+        </div>
+
+        <div class="foother__useful__link">
+          <div class="foother__useful__link__title">
+            Useful Link
+          </div>
+          <p class="foother__useful__link__subtitle">
+            Resource
+          </p>
+          <p class="foother__useful__link__subtitle">
+            Downloads
+          </p>
+          <p class="foother__useful__link__subtitle">
+            Graphics
+          </p>
+          <p class="foother__useful__link__subtitle">
+            Templates
+          </p>
+          <p class="foother__useful__link__subtitle">
+            UI colors
+          </p>
+        </div>
+
+        <div class="foother__useful__link">
+          <div class="foother__useful__link__title">
+            Free Goods
+          </div>
+          <p class="foother__useful__link__subtitle">
+            Movies
+          </p>
+          <p class="foother__useful__link__subtitle">
+            Music
+          </p>
+          <p class="foother__useful__link__subtitle">
+            Videos
+          </p>
+          <p class="foother__useful__link__subtitle">
+            Games
+          </p>
+          <p class="foother__useful__link__subtitle">
+            Application
+          </p>
+        </div>
+
+        <div class="foother__useful__link">
+          <div class="foother__useful__link__title">
+            Elements
+          </div>
+          <p class="foother__useful__link__subtitle">
+            UI Elements
+          </p>
+          <p class="foother__useful__link__subtitle">
+            Materials
+          </p>
+          <p class="foother__useful__link__subtitle">
+            Flat UI
+          </p>
+          <p class="foother__useful__link__subtitle">
+            Print File
+          </p>
+          <p class="foother__useful__link__subtitle">
+            Flyer
+          </p>
+        </div>
+
+        <div class="foother__useful__link">
+          <div class="foother__useful__link__title">
+            About Us
+          </div>
+          <p class="foother__useful__link__subtitle">
+            Home
+          </p>
+          <p class="foother__useful__link__subtitle">
+            Portfolio
+          </p>
+          <p class="foother__useful__link__subtitle">
+            Layourt
+          </p>
+          <p class="foother__useful__link__subtitle">
+            Blog
+          </p>
+          <p class="foother__useful__link__subtitle">
+            Contact Us
+          </p>
+        </div>
+
+
+      </section>  <!--footer__content-->
+    </section>  <!--container-->
+  </footer>
+
+  <p class="athor">© Copyright 2017 | All rights reserved | Template Designed By
+    <b>
+      Sourabh Barua
+    </b>
+  </p>
+
+
+
+
+
+<!-- =======================================================
+=============================================================-->
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/slider.js"></script>
+
+
+
+<!-- Redirection -->
+
+
+<nav class="nav__phone">
+  <div class="nav__phone__container">
+
+    <a class="nav__phone__content" onclick="switching(0)">
+      <!-- <div> Home </div> -->
+      <picture>
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+        <g>
+          <g>
+            <path d="M506.555,208.064L263.859,30.367c-4.68-3.426-11.038-3.426-15.716,0L5.445,208.064
+              c-5.928,4.341-7.216,12.665-2.875,18.593s12.666,7.214,18.593,2.875L256,57.588l234.837,171.943c2.368,1.735,5.12,2.57,7.848,2.57
+              c4.096,0,8.138-1.885,10.744-5.445C513.771,220.729,512.483,212.405,506.555,208.064z"/>
+          </g>
+        </g>
+        <g>
+          <g>
+            <path d="M442.246,232.543c-7.346,0-13.303,5.956-13.303,13.303v211.749H322.521V342.009c0-36.68-29.842-66.52-66.52-66.52
+              s-66.52,29.842-66.52,66.52v115.587H83.058V245.847c0-7.347-5.957-13.303-13.303-13.303s-13.303,5.956-13.303,13.303v225.053
+              c0,7.347,5.957,13.303,13.303,13.303h133.029c6.996,0,12.721-5.405,13.251-12.267c0.032-0.311,0.052-0.651,0.052-1.036v-128.89
+              c0-22.009,17.905-39.914,39.914-39.914s39.914,17.906,39.914,39.914v128.89c0,0.383,0.02,0.717,0.052,1.024
+              c0.524,6.867,6.251,12.279,13.251,12.279h133.029c7.347,0,13.303-5.956,13.303-13.303V245.847
+              C455.549,238.499,449.593,232.543,442.246,232.543z"/>
+          </g>
+        </g>
+        </svg>
+      </picture>
+    </a>
+    <a class="nav__phone__content nav__active" onclick="switching(1)">
+      <!-- <div> Site </div> -->
+      <picture>
+        <svg id="Icons" height="512" viewBox="0 0 74 74" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m67 72h-60a5.006 5.006 0 0 1 -5-5v-46h2v46a3 3 0 0 0 3 3h60a3 3 0 0 0 3-3v-60a3 3 0 0 0 -3-3h-60a3 3 0 0 0 -3 3v10h-2v-10a5.006 5.006 0 0 1 5-5h60a5.006 5.006 0 0 1 5 5v60a5.006 5.006 0 0 1 -5 5z"/><path d="m67 68h-60a1 1 0 0 1 -1-1v-52a1 1 0 0 1 1-1h60a1 1 0 0 1 1 1v52a1 1 0 0 1 -1 1zm-59-2h58v-50h-58z"/><path d="m64 12a3 3 0 1 1 3-3 3 3 0 0 1 -3 3zm0-4a1 1 0 1 0 1 1 1 1 0 0 0 -1-1z"/><path d="m56 12a3 3 0 1 1 3-3 3 3 0 0 1 -3 3zm0-4a1 1 0 1 0 1 1 1 1 0 0 0 -1-1z"/><path d="m48 12a3 3 0 1 1 3-3 3 3 0 0 1 -3 3zm0-4a1 1 0 1 0 1 1 1 1 0 0 0 -1-1z"/><path d="m7 8h29v2h-29z"/><path d="m50 57h-26a5.006 5.006 0 0 1 -5-5v-16a5.006 5.006 0 0 1 5-5h26a5.006 5.006 0 0 1 5 5v16a5.006 5.006 0 0 1 -5 5zm-26-24a3 3 0 0 0 -3 3v16a3 3 0 0 0 3 3h26a3 3 0 0 0 3-3v-16a3 3 0 0 0 -3-3z"/><path d="m50 57h-26a5.006 5.006 0 0 1 -5-5v-7a5.006 5.006 0 0 1 5-5h26a5.006 5.006 0 0 1 5 5v7a5.006 5.006 0 0 1 -5 5zm-26-15a3 3 0 0 0 -3 3v7a3 3 0 0 0 3 3h26a3 3 0 0 0 3-3v-7a3 3 0 0 0 -3-3z"/><path d="m44 33h-14a1 1 0 0 1 -1-1v-4a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v4a1 1 0 0 1 -1 1zm-13-2h12v-3a1 1 0 0 0 -1-1h-10a1 1 0 0 0 -1 1z"/><path d="m44 41h2v3h-2z"/><path d="m28 41h2v3h-2z"/></svg>
+      </picture>
+    </a>
+    <a class="nav__phone__content" onclick="switching(2)">
+      <!-- <div> 3D </div> -->
+      <picture>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 279.199 279.199" xml:space="preserve">
+        <path style="fill:#fff;" d="M275.639,64.92c-0.01-0.077-0.023-0.153-0.035-0.229c-0.045-0.283-0.104-0.561-0.18-0.833
+          c-0.011-0.042-0.02-0.083-0.032-0.125c-0.094-0.314-0.208-0.62-0.341-0.916c-0.022-0.05-0.048-0.098-0.071-0.148
+          c-0.121-0.256-0.256-0.504-0.404-0.743c-0.029-0.048-0.057-0.097-0.087-0.144c-0.173-0.266-0.362-0.52-0.567-0.761
+          c-0.04-0.047-0.083-0.091-0.125-0.138c-0.18-0.201-0.37-0.392-0.57-0.573c-0.051-0.046-0.1-0.094-0.152-0.138
+          c-0.243-0.208-0.499-0.401-0.767-0.577c-0.042-0.027-0.085-0.051-0.127-0.077c-0.255-0.16-0.52-0.304-0.794-0.433
+          c-0.028-0.013-0.053-0.031-0.081-0.044L142.699,0.671c-1.969-0.895-4.23-0.895-6.199,0L47.638,41.004
+          c-3.772,1.712-5.441,6.157-3.729,9.929c1.711,3.772,6.158,5.446,9.929,3.729L139.6,15.736l110.217,50.025L139.6,114.198
+          L14.011,59.006c-0.009-0.004-0.018-0.006-0.027-0.01c-0.184-0.08-0.374-0.149-0.565-0.215c-0.048-0.017-0.096-0.037-0.144-0.053
+          c-0.157-0.05-0.319-0.089-0.48-0.129c-0.085-0.021-0.17-0.047-0.256-0.065c-0.103-0.022-0.209-0.034-0.314-0.052
+          c-0.146-0.024-0.292-0.051-0.438-0.067c-0.068-0.007-0.139-0.008-0.208-0.013c-0.183-0.014-0.365-0.026-0.547-0.027
+          c-0.013,0-0.025-0.002-0.038-0.002c-0.071,0-0.14,0.009-0.21,0.011c-0.162,0.004-0.324,0.009-0.484,0.024
+          c-0.125,0.011-0.247,0.031-0.37,0.049c-0.113,0.017-0.227,0.03-0.338,0.052c-0.153,0.029-0.302,0.067-0.452,0.104
+          c-0.081,0.021-0.162,0.039-0.242,0.063c-0.162,0.047-0.32,0.103-0.477,0.16c-0.068,0.024-0.136,0.047-0.203,0.074
+          c-0.155,0.062-0.306,0.131-0.456,0.203c-0.069,0.034-0.14,0.065-0.208,0.101c-0.136,0.07-0.269,0.147-0.4,0.226
+          c-0.081,0.048-0.162,0.095-0.24,0.146c-0.113,0.073-0.222,0.152-0.331,0.231c-0.091,0.066-0.182,0.132-0.27,0.202
+          c-0.092,0.074-0.181,0.152-0.269,0.23c-0.096,0.084-0.191,0.167-0.282,0.256c-0.079,0.077-0.154,0.159-0.229,0.239
+          c-0.09,0.096-0.18,0.191-0.266,0.292c-0.076,0.09-0.147,0.186-0.22,0.28c-0.074,0.096-0.148,0.19-0.218,0.291
+          c-0.083,0.12-0.158,0.245-0.234,0.37c-0.049,0.081-0.101,0.16-0.148,0.243c-0.09,0.162-0.17,0.329-0.249,0.497
+          c-0.022,0.048-0.049,0.091-0.07,0.14c-0.004,0.009-0.006,0.019-0.01,0.027c-0.08,0.184-0.149,0.373-0.214,0.563
+          c-0.017,0.049-0.038,0.097-0.054,0.146c-0.049,0.155-0.088,0.315-0.127,0.474c-0.022,0.088-0.049,0.175-0.068,0.264
+          c-0.021,0.098-0.032,0.198-0.049,0.297c-0.026,0.152-0.054,0.304-0.07,0.457c-0.006,0.06-0.006,0.12-0.011,0.18
+          c-0.016,0.192-0.028,0.385-0.029,0.577c0,0.011-0.001,0.021-0.001,0.033v146.427c0,2.925,1.7,5.583,4.355,6.809l128.606,59.398
+          c0,0,0.018,0.006,0.026,0.011c0.055,0.024,0.111,0.042,0.166,0.065c0.25,0.107,0.501,0.201,0.756,0.279
+          c0.089,0.027,0.179,0.05,0.27,0.074c0.243,0.065,0.486,0.117,0.73,0.157c0.075,0.012,0.15,0.027,0.226,0.037
+          c0.322,0.042,0.645,0.07,0.966,0.07c0.032,0,0.063-0.006,0.095-0.007c0.283-0.003,0.566-0.024,0.848-0.06
+          c0.104-0.013,0.206-0.033,0.308-0.05c0.219-0.037,0.437-0.083,0.653-0.14c0.101-0.026,0.2-0.052,0.299-0.083
+          c0.239-0.073,0.473-0.16,0.706-0.258c0.065-0.027,0.131-0.049,0.195-0.078c0.015-0.007,0.031-0.011,0.045-0.018l128.606-59.398
+          c2.655-1.226,4.355-3.884,4.355-6.809V65.872C275.706,65.549,275.679,65.232,275.639,64.92z M147.1,259.972V159.266
+          c0-4.143-3.357-7.5-7.5-7.5s-7.5,3.357-7.5,7.5v100.707l-113.606-52.47V77.36l118.089,51.896c0.962,0.423,1.989,0.634,3.018,0.634
+          s2.056-0.211,3.018-0.634L260.706,77.36v130.142L147.1,259.972z"/>
+        </svg>
+      </picture>
+    </a>
+
+  </div>
+</nav>
+  <link rel="stylesheet" href="/portfolio/redirection/redirection.css">
+  <script src="/portfolio//redirection/redirection.js"></script>
+
+  </body>
+</html>
