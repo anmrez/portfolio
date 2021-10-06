@@ -63,7 +63,7 @@ h1,h2,h3,h5,h4,h6 {margin: 0;}
   z-index: 22;
 }
 .header__active{
-  background: #42a8f6db;
+  background: #42a8f6;
 }
 
 
@@ -1155,7 +1155,20 @@ h3{
 =================MEDIA==========================
 ================================================
 ==============================================*/
+@media (max-width: 1400px) {
 
+  .intro__container2{
+    padding-right: 15em;
+  }
+  
+  .block__1__container2{
+    margin-right: 1em
+  }
+
+
+}/*=============================================
+===============____1024px___====================
+==============================================*/
 @media (max-width: 1024px) {
 
   .place{
@@ -1203,6 +1216,14 @@ h3{
 @media (max-width: 800px) {
 
 /*=======Header========*/
+  .header {
+    height: 80px;
+
+  }
+  .Header__content{
+     padding: 20px  0 7px;
+
+  }
 .Header__navigation{
   display: grid;
   grid-template-rows: repeat(4,auto);
