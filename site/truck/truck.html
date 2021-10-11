@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>cargo transportation </title>
+    <!-- <meta name="viewport" content="width=device-width, initeal-scale=1"> -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Chrome, firefox, opera -->
+    <meta name="theme-color" content="#c722c9">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#c722c9">
+    <!-- Ios -->
+    <meta name="apple-mobile-web-status-bar-style" content="#c722c9">
+
+</head>
+<body>
+
+<!-- sprite -->
+<svg style="display: none;">
+  <symbol id="airplane" width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+    <path d="M19.9349 7.57241L20.1763 7.60135L20.3481 7.42941L25.5211 2.25329C25.6365 2.1379 25.7743 2.04303 25.9264 1.97269C25.9268 1.97251 25.9272 1.97233 25.9276 1.97214L29.0996 0.528308C29.3422 0.417943 29.5769 0.667052 29.4711 0.894823L29.4696 0.89821L28.0246 4.07276L28.0245 4.07299C27.9556 4.22461 27.8619 4.3595 27.7446 4.47677L27.7446 4.4768L22.5683 9.65304L22.3965 9.82489L22.4255 10.0662L24.5646 27.8794C24.5646 27.8797 24.5646 27.8799 24.5646 27.8801C24.5845 28.0523 24.526 28.222 24.4043 28.3438L23.4128 29.3352C23.1345 29.6136 22.6657 29.5267 22.5058 29.1688L22.5056 29.1684L16.782 16.3982L16.4853 15.7361L15.9722 16.2492L12.3066 19.9148L12.1602 20.0612V20.2683V26.6706C12.1602 26.8214 12.102 26.9626 11.997 27.0677L12.3345 27.4051L11.997 27.0677L11.459 27.6056L11.458 27.6066C11.1806 27.8857 10.7044 27.7947 10.549 27.4312L10.5488 27.4307L8.23439 22.0293L8.15561 21.8454L7.97173 21.7666L2.57031 19.4522L2.56986 19.452C2.20707 19.297 2.11415 18.8232 2.39541 18.542L2.39644 18.5409L2.9291 18.0052C3.03753 17.8993 3.18059 17.8409 3.32731 17.8409H9.72958H9.93668L10.0831 17.6944L13.7487 14.0288L14.2617 13.5158L13.5997 13.219L0.832708 7.49545L0.832212 7.49523C0.474377 7.33528 0.387459 6.86656 0.66583 6.58819L1.65729 5.59673L1.6573 5.59674L1.65969 5.59431C1.77605 5.47636 1.94677 5.41629 2.12089 5.43635C2.12113 5.43638 2.12137 5.43641 2.12161 5.43643L19.9349 7.57241Z" stroke="black"/>
+  </symbol>
+
+  <symbol id="arrow__L" width="67" height="24" viewBox="0 0 67 28">
+    <path d="M66.0607 10.9393C66.6464 11.5251 66.6464 12.4749 66.0607 13.0607L56.5147 22.6066C55.9289 23.1924 54.9792 23.1924 54.3934 22.6066C53.8076 22.0208 53.8076 21.0711 54.3934 20.4853L62.8787 12L54.3934 3.51471C53.8076 2.92893 53.8076 1.97918 54.3934 1.39339C54.9792 0.807607 55.9289 0.807607 56.5147 1.39339L66.0607 10.9393ZM-1.31134e-07 10.5L65 10.5L65 13.5L1.31134e-07 13.5L-1.31134e-07 10.5Z"/>
+  </symbol>
+  <symbol id="arrow__R" width="67" height="24" viewBox="0 0 67 28">
+    <path d="M0.939339 10.9393C0.353554 11.5251 0.353554 12.4749 0.939339 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51471C13.1924 2.92893 13.1924 1.97918 12.6066 1.39339C12.0208 0.807607 11.0711 0.807607 10.4853 1.39339L0.939339 10.9393ZM67 10.5L2 10.5L2 13.5L67 13.5L67 10.5Z"/>
+  </symbol>
+
+
+</svg>
+
+
+<!--header-->
+  <header class="header" id="header">
+    <section class="container">
+      <section class="header__content flex ">
+        <div class="language flex">
+          <div class="lng" onclick="language(0)">
+            рус
+          </div>
+          <div class="lng" onclick="language(1)">
+            eng
+          </div>
+          <div class="lng" onclick="language(2)">
+            fr
+          </div>
+        </div>  <!--language-->
+
+        <div class="number">
+          8 (800) 123-45-67
+        </div>
+
+        <div class="email">
+          sales@log.ru
+        </div>
+
+      </section>  <!--header__content-->
+    </section>  <!--container-->
+  </header>  <!--header-->
+
+
+<!--header2-->
+  <header class="header2" id="header2">
+    <section class="container">
+      <section class="header2__content flex ">
+
+        <nav class="navigation navigation__left flex">
+
+          <div class="logo">
+            <picture>
+              <img src="assets\i\logo.svg" alt="">
+            </picture>
+          </div>  <!--logo-->
+
+          <div class="office flex">
+            <picture>
+              <img src="assets\i\placeholder.svg" alt="">
+            </picture>
+            <div id="office">
+              Наши офисы
+            </div>
+          </div>
+        </nav>  <!--container-->
+
+
+        <nav class="navigation navigation__right">
+          <a id="link_1" class="link" href="#">услуги</a>
+          <a id="link_2" class="link" href="#">о компании</a>
+          <a id="link_3" class="link" href="#">вакансии</a>
+          <a id="link_4" class="link" href="#">контакты</a>
+        </nav>
+
+
+      </section>  <!--header2__content-->
+    </section>  <!--container-->
+  </header>  <!--header2-->
+
+<!--intro-->
+  <section class="intro" id="intro">
+    <section class="container flex column relative">
+      <section class="intro__content flex column">
+
+        <div class="intro__content__title" id="intro__title">
+          Грузовые перевозки
+        </div>
+        <div class="intro__content__subtitle" id="intro__subtitle">
+          Перевозка крупногабаритных грузов по России и Европе. Полное экспедирование, страхование, упаковка и хранение грузов
+        </div>
+
+      </section>  <!--intro__content-->
+      <picture class="mouse">
+        <img src="assets\i\mouse.svg" alt="">
+      </picture>
+    </section>  <!--container-->
+  </section>  <!--intro-->
+
+
+<!--block__1-->
+  <section class="block__1 flex" id="block__1">
+    <div class="vertical__div"> </div>
+    <section class="container">
+      <section class="block__1__content flex">
+
+        <div class="cart flex">
+          <div class="cart__left">
+
+            <div class="title" id="block__1__title">
+              грузоперевозки по европе
+            </div>
+            <div class="cart__left__subtitle" id="block__1__subtitle">
+              Страны Евросоюза, а также Украина, Белоруссия со всеми документами.
+            </div>
+            <div class="button flex">
+              <a id="block__1__button" href="#">подробнее</a>
+            </div>
+          </div>  <!--cart__left-->
+
+          <div class="cart__rigt flex">
+            <picture>
+              <img src="assets\i\truck.png" alt="">
+            </picture>
+            <div class="cart__rigt__buttons">
+              <div class="next flex">
+                <div id="block__1__button__next">
+                  След
+                </div>
+                <svg>
+                  <Use xlink:href="#arrow__L"> </Use>
+                </svg>
+              </div>
+              <div class="previos flex">
+                <svg>
+                  <Use xlink:href="#arrow__R"> </Use>
+                </svg>
+                <div id="block__1__button__previos">
+                  Назад
+
+                </div>
+              </div>
+            </div>
+          </div>  <!--cart__rigt-->
+
+        </div>  <!--cart-->
+
+
+      </section>  <!--block__1-->
+    </section>  <!--container-->
+  </section>  <!--block__1-->
+
+
+
+<!--block__2-->
+  <section class="block__2 relative" id="block__2">
+    <section class="container flex">
+      <section class="block__2__content">
+
+          <div class="title " id="block__2__title">
+            Услуги
+          </div>
+          <div class="grid magrin__top__30">
+            <div class="grid__element flex column">
+              <picture class="relative flex">
+                <div class="ellipse"> </div>
+                <svg class="block_3__buttons__arrow_l">
+                  <Use xlink:href="#airplane"> </Use>
+                </svg>
+                <!-- <div class="ellipse"> </div> -->
+              </picture>
+              <div class="" id="block__2__grid__1">
+                Авиаперевозки
+              </div>
+            </div>
+
+            <div class="grid__element flex column">
+              <picture class="relative flex">
+                <div class="ellipse"> </div>
+                <svg class="block_3__buttons__arrow_l">
+                  <Use xlink:href="#airplane"> </Use>
+                </svg>
+                <!-- <div class="ellipse"> </div> -->
+              </picture>
+              <div class="" id="block__2__grid__2">
+                Авиаперевозки
+              </div>
+            </div>
+
+            <div class="grid__element flex column">
+              <picture class="relative flex">
+                <div class="ellipse"> </div>
+                <svg class="block_3__buttons__arrow_l">
+                  <Use xlink:href="#airplane"> </Use>
+                </svg>
+                <!-- <div class="ellipse"> </div> -->
+              </picture>
+              <div class="" id="block__2__grid__3">
+                Авиаперевозки
+              </div>
+            </div>
+
+            <div class="grid__element flex column">
+              <picture class="relative flex">
+                <div class="ellipse"> </div>
+                <svg class="block_3__buttons__arrow_l">
+                  <Use xlink:href="#airplane"> </Use>
+                </svg>
+                <!-- <div class="ellipse"> </div> -->
+              </picture>
+              <div class="" id="block__2__grid__4">
+                Авиаперевозки
+              </div>
+            </div>
+            <!-- 4 -->
+            <div class="grid__element flex column">
+              <picture class="relative flex">
+                <div class="ellipse"> </div>
+                <svg class="block_3__buttons__arrow_l">
+                  <Use xlink:href="#airplane"> </Use>
+                </svg>
+                <!-- <div class="ellipse"> </div> -->
+              </picture>
+              <div class="" id="block__2__grid__5">
+                Авиаперевозки
+              </div>
+            </div>
+
+            <div class="grid__element flex column">
+              <picture class="relative flex">
+                <div class="ellipse"> </div>
+                <svg class="block_3__buttons__arrow_l">
+                  <Use xlink:href="#airplane"> </Use>
+                </svg>
+                <!-- <div class="ellipse"> </div> -->
+              </picture>
+              <div class="" id="block__2__grid__6">
+                Авиаперевозки
+              </div>
+            </div>
+
+            <div class="grid__element flex column">
+              <picture class="relative flex">
+                <div class="ellipse"> </div>
+                <svg class="block_3__buttons__arrow_l">
+                  <Use xlink:href="#airplane"> </Use>
+                </svg>
+                <!-- <div class="ellipse"> </div> -->
+              </picture>
+              <div class="" id="block__2__grid__7">
+                Авиаперевозки
+              </div>
+            </div>
+
+            <div class="grid__element flex column">
+              <picture class="relative flex">
+                <div class="ellipse"> </div>
+                <svg class="block_3__buttons__arrow_l">
+                  <Use xlink:href="#airplane"> </Use>
+                </svg>
+                <!-- <div class="ellipse"> </div> -->
+              </picture>
+              <div class="" id="block__2__grid__8">
+                Авиаперевозки
+              </div>
+            </div>
+            <!-- 8 -->
+          </div>  <!--grid-->
+
+      </section>  <!--block__2__content-->
+    </section>  <!--container-->
+  </section>  <!--block__2-->
+
+
+
+
+<!--block__3-->
+  <section class="block__3 flex" id="block__3">
+    <div class="vertical__div vertical__div__2"> </div>
+    <section class="container">
+      <section class="block__3__content flex relative">
+
+        <div class="cart flex">
+          <div class="cart__left">
+
+            <div class="title" id="block__3__title">
+              О компании
+            </div>
+            <div class="cart__left__subtitle font__16px" id="block__3__text">
+              Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.
+            </div>
+
+          </div>  <!--cart__left-->
+
+          <div class="grid grid__2">
+            <div class="grid__block__3 flex column">
+              <div class="">
+                48
+              </div>
+              <div class="" id="block__3__grid__title__1">
+                оффисов
+              </div>
+              <div class="" id="block__3__grid__subtitle__1">
+                В Европе и СНГ
+              </div>
+            </div>
+
+            <div class="grid__block__3 flex column">
+              <div class="">
+                371
+              </div>
+              <div class="" id="block__3__grid__title__2">
+                грузовиков
+              </div>
+              <div class="" id="block__3__grid__title__2">
+                Volvo, Scania
+              </div>
+            </div>
+
+            <div class="grid__block__3__img"> </div>
+            <div class="grid__block__3__img"> </div>
+
+            <div class="grid__block__3 flex column">
+              <div class="">
+                1500
+              </div>
+              <div class="" id="block__3__grid__title__3">
+                сотрудников
+              </div>
+              <div class="" id="block__3__grid__title__3">
+                профессионалов
+              </div>
+            </div>
+
+          </div>  <!--grid-->
+
+      </section>  <!--block__3__content-->
+    </section>  <!--container-->
+  </section>  <!--block__3-->
+
+
+
+<!--map-->
+  <section class="map" id="map"> </section>  <!--map-->
+
+
+<!--footer-->
+  <footer class="footer" id="footer">
+    <section class="container flex">
+      <section class="footer__content flex">
+
+        <div class="logo flex">
+          <picture>
+            <img src="assets\i\logo_2.svg" alt="">
+          </picture>
+          <div class="addres_email flex column">
+            <div class="addres" id="addres">
+              123456, Санкт-Петербург, Невский пр-кт 127
+            </div>
+            <div class="email">
+              sales@log.ru
+            </div>
+          </div>
+        </div>  <!--logo-->
+
+        <div class="number__footer flex column">
+          <div class="number">
+            +7 (812) 344-56-65
+          </div>
+          <div class="number">
+            +7 (812) 344-56-65
+          </div>
+        </div>
+
+        <div class="developers" id="developers">
+          Разработано - D-E-N.ru
+        </div>
+
+      </section>  <!--footer__content-->
+    </section>  <!--container-->
+  </footer>  <!--footer-->
+
+
+<!-- =======================================================
+=============================================================-->
+<script src="assets/js/langArr.js"></script>
+  <script src="assets/js/app.js"></script>
+  <!-- <script src="assets\js\slider.js"></script> -->
+  <!-- <script src="assets/js/timer.js"></script> -->
+
+
+  </body>
+</html>
