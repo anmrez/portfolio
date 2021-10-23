@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initeal-scale=1">
+  <link rel="stylesheet" href="assets\css\style.css">
+  <!-- <link rel="stylesheet" href="assets\css\media.css"> -->
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+
+  <title>Sample</title>
+</head>
+<body>
+
+<!--header-->
+  <header class="header">
+    <section class="container">
+      <section class="Header__content">
+        <picture class="Header__placeholder">
+          <img src="assets\i\ease.svg" alt="">
+        </picture>
+          <section class="Burger" onclick="openSidebar()">
+            <span class="burger__span"></span>
+          </section>
+          <section class="Header__navigation">
+            <a href="#intro" class="Header__link" onclick="link()" data-page="intro">
+              <section class="">
+                Collesctions
+              </section>
+            </a>
+
+            <a href="#intro" class="Header__link" onclick="link()" data-page="intro">
+              <section class="">
+                blog
+              </section>
+            </a>
+
+            <a href="#intro" class="Header__link" onclick="link()" data-page="intro">
+              <section class="">
+                About
+              </section>
+            </a>
+
+            <a href="#intro" class="Header__link" onclick="link()" data-page="intro">
+              <section class="">
+                contacts
+              </section>
+            </a>
+          </section>  <!--Header__navigation-->
+      </section>  <!--Header__content-->
+    </section>  <!--container-->
+  </header>
+
+
+<!--intro-->
+<section class="intro">
+  <section class="container">
+    <section class="intro__contetn flex">
+      <div class="intro__text">
+        Collection of lighting is inspired by the geometric works of the great Suprematist artists Kissitzky and Kazimir Malevich. <br><br>
+        Suprematism is a modernist movement in the art of the early twentieth century, focused on the basic geometric forms, such as circles, squares, lines and rectangles. The geometric structure of the lamps will always look like a small art objects in your house.
+      </div>
+      <picture class="intro__picture">
+        <div class="menu">
+
+
+          <div class="button__lamps button__lamps__active" onclick="btnActive(0)">
+            <img class="button__lamps__img" src="assets\i\Lamp__1.png" alt="">
+          </div>
+
+
+          <div class="button__lamps"  onclick="btnActive(1)">
+            <img class="button__lamps__img" src="assets\i\Lamp__2.png" alt="">
+          </div>
+
+
+          <div class="button__lamps"  onclick="btnActive(2)">
+            <img class="button__lamps__img" src="assets\i\lamp__3.png" alt="">
+          </div>
+
+
+          <div class="buttons">
+            <div class="light flex" onclick="nightOn(0)">
+              <picture>
+                <img src="assets\i\Vector.svg" alt="">
+              </picture>
+            </div>
+            <div class="night flex" onclick="nightOn(1)">
+              <picture>
+                <img src="assets\i\Vector-1.svg" alt="">
+              </picture>
+            </div>
+          </div>
+        </div>
+        <img class="intro__img__1" src="assets\i\img_1.png" alt="">
+        <img class="intro__img__2" src="assets\i\img__nigt__1.png" alt="">
+        <img class="intro__img__2" src="assets\i\img__nigt__2.png" alt="">
+        <img class="intro__img__2" src="assets\i\img__nigt__3.png" alt="">
+
+        <div class="lamp__hidden">
+          <img class="intro__img__lamp intro__img__lamp__active" src="assets\i\Lamp__1.png" alt="">
+          <img class="intro__img__lamp " src="assets\i\Lamp__2.png" alt="">
+          <img class="intro__img__lamp " src="assets\i\Lamp__3.png" alt="">
+        </div>
+
+      </picture>
+    </section>  <!--intro__contetn-->
+  </section>  <!--container-->
+</section> <!--intro-->
+
+
+<!--block__1-->
+<section class="block__1">
+  <section class="container container__block__1">
+
+
+    <section class="block__1__content block__1__content__active">
+      <div class="ellipse flex">
+        <div class="characteristic">
+          <b> Material:         </b> Metal <br>
+          <b> Dimensions (cm):  </b> H 45 x W 12 x D 12 <br>
+          <b> Net Weight:       </b> 2,4 kg <br>
+          <b> Electrification:  </b> <br> LED 10W | G9 | 220-240V | 50 Hz
+        </div>
+      </div>
+      <picture class="block__1__picture">
+        <img class="block__1__img__1" src="assets\i\lamp__1.png" alt="">
+      </picture>
+
+    </section>  <!--block__1__content-->
+
+    <section class="block__1__content">
+      <div class="ellipse flex">
+        <div class="characteristic">
+          <b> Material:         </b> Metal <br>
+          <b> Dimensions (cm):  </b> H 45 x W 12 x D 12 <br>
+          <b> Net Weight:       </b> 2,4 kg <br>
+          <b> Electrification:  </b> <br> LED 10W | G9 | 220-240V | 50 Hz
+        </div>
+      </div>
+      <picture class="block__1__picture">
+        <img class="block__1__img__1" src="assets\i\lamp__2.png" alt="">
+      </picture>
+
+    </section>  <!--block__1__content-->
+
+
+    <section class="block__1__content">
+      <div class="ellipse flex">
+        <div class="characteristic">
+          <b> Material:         </b> Metal <br>
+          <b> Dimensions (cm):  </b> H 45 x W 12 x D 12 <br>
+          <b> Net Weight:       </b> 2,4 kg <br>
+          <b> Electrification:  </b> <br> LED 10W | G9 | 220-240V | 50 Hz
+        </div>
+      </div>
+      <picture class="block__1__picture">
+        <img class="block__1__img__1" src="assets\i\lamp__3.png" alt="">
+      </picture>
+
+    </section>  <!--block__1__content-->
+
+  </section>  <!--container-->
+</section> <!--block__1-->
+
+
+
+<!--block__2-->
+<section class="block__2">
+  <section class="container">
+    <section class="block__2__content">
+
+
+    </section>  <!--block__2__content-->
+  </section>  <!--container-->
+</section> <!--block__2-->
+
+
+
+<!--block__3-->
+<section class="block__3">
+  <section class="container">
+    <section class="block__3__content">
+
+
+    </section>  <!--block__3__content-->
+  </section>  <!--container-->
+</section> <!--block__3-->
+
+
+
+<!--block__4-->
+<section class="block__4">
+  <section class="container">
+    <section class="block__4__content">
+
+
+    </section>  <!--block__4__content-->
+  </section>  <!--container-->
+</section> <!--block__4-->
+
+
+<!--footer-->
+<footer class="footer">
+  <section class="container">
+    <section class="footer__content">
+
+
+    </section>  <!--footer__content-->
+  </section>  <!--container-->
+</footer> <!--footer-->
+
+
+<!-- scripts -->
+
+  <script src="assets\js\app.js" type="text/javascript"> </script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+  <!-- <script src="assets\js\JQ.js" type="text/javascript"> </script> -->
+
+
+</body>
+</html>
