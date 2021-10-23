@@ -24,7 +24,7 @@
 
 
   const textureLoader = new THREE.TextureLoader()
-  const texture = textureLoader.load('i/part.png')
+  const texture = textureLoader.load('i/part.webp')
 
 
   const geometry = new THREE.BufferGeometry()
