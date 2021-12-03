@@ -1,0 +1,25 @@
+@media (max-width: 1400px) {
+  body {
+    overflow: auto;
+  }
+
+  .container {
+    padding-bottom: 20%;
+  }
+}
+@media (max-width: 950px) {
+  .hint {
+    display: none;
+  }
+
+  .button__home__container {
+    display: none;
+  }
+
+  #fox {
+    position: fixed;
+    bottom: -70px;
+    right: 0;
+    height: 400px;
+  }
+}

@@ -1,6 +1,4 @@
 
-
-// (() => {
   const canvas = document.getElementById('canvas')
   const scene = new THREE.Scene()
 
@@ -19,14 +17,12 @@
     100
   )
 
+// Позиция камеры
   camera.position.z = 5
   scene.add(camera)
 
 
-  const textureLoader = new THREE.TextureLoader()
-  const texture = textureLoader.load('i/part.webp')
-
-
+// создание геометрии частиц
   const geometry = new THREE.BufferGeometry()
   const count = 4000
   const position = new Float32Array(count * 3)
@@ -37,10 +33,20 @@
   geometry.setAttribute('position', new THREE.BufferAttribute(position , 3))
 
 
-  const material = new THREE.PointsMaterial({
+// Загрузка тектуры
+  const textureLoader = new THREE.TextureLoader()
+  const texture = textureLoader.load('i/part.webp')
+
+
+
+// материал частиц
+
+const red = new THREE.Color('#FF0000');
+const blue = new THREE.Color('#0000FF');
+  let material = new THREE.PointsMaterial({
     size: 0.08,
     sizeAttenuation: true,
-    color: new THREE.Color('#FFFFFF'),
+    color: blue,
     map: texture,
     alphaMap: texture,
     transparent: true,
@@ -48,21 +54,22 @@
 
   })
 
-
-  const particle = new THREE.Points(geometry, material)
+// создание частиц
+  let particle = new THREE.Points(geometry, material)
   scene.add(particle)
 
   const raf = () => {
-    particle.rotation.x -= 0.003
+    particle.rotation.x -= 0.0025
     renderer.render(scene, camera)
     window.requestAnimationFrame(raf)
 
 
   }
 
+
   raf()
 
-
+// Адаптивность холста
   window.addEventListener( 'resize', onWindowResize, false );
 
   function onWindowResize() {
@@ -74,4 +81,34 @@
   }
 
 
-// })();
+// hover
+
+
+let link = document.querySelectorAll(".link__portfolio")
+console.log(link);
+
+
+function howerBtnMove() {
+  console.log("move");
+
+  scene.remove(particle)
+  material = new THREE.PointsMaterial({
+    size: 0.08,
+    sizeAttenuation: true,
+    color: red,
+    map: texture,
+    alphaMap: texture,
+    transparent: true,
+    depthTest: false
+
+  })
+  particle = new THREE.Points(geometry, material)
+  scene.add(particle)
+
+}
+
+function howerBtnOver(){
+  material = new THREE.PointsMaterial({
+    color: new THREE.Color('#0000FF'),
+  })
+}

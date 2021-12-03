@@ -1,0 +1,516 @@
+@import "variable.sass"
+
+::-webkit-scrollbar
+  width: 0px
+  background: transparent
+
+
+html
+  -ms-overflow-style: none
+  scrollbar-width: none
+
+
+
+body
+  max-height: 100%
+  padding: 0
+  margin: 0
+  background: #202430
+  min-height: 108vh
+  overflow: hidden
+  font-family: 'Raleway', sans-serif
+  position: relative
+
+
+#canvas
+  display: block
+  position: absolute
+  z-index: 0
+  position: fixed
+
+
+
+
+.neon
+  overflow: hidden
+  min-height: 100%
+  width: 100%
+  position: absolute
+
+
+h1,h2,h3,h5,h4,h6
+  margin: 0
+*,
+*:before,
+*:after
+  box-sizing: border-box
+
+
+
+
+.hint
+  position: absolute
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  animation: hint 5s linear forwards
+  z-index: 0
+
+@keyframes hint
+  75%
+    opacity: 1
+
+  100%
+    opacity: 0
+
+
+.hint__text
+  color: #fff
+  padding-top: 10px
+  padding: 20px
+  animation: hint__text 5s linear forwards
+
+@keyframes hint__text
+  0%
+    box-shadow: 0 0 0px  , 0 0 5px $color, 0 0 10px $color, inset 0 0 0px $color, inset 0 0 50px $color, inset 0 0 10px
+
+  10%
+    box-shadow: 0 0 10px $color, 0 0 40px $color, 0 0 40px $color, inset 0 0 10px $color, inset 0 0 40px $color, inset 0 0 80px $color
+
+  75%
+    opacity: 1
+
+  90%
+    opacity: 0
+
+
+
+//nav__phone
+.nav__phone
+  position: fixed
+  width: 100%
+  height: 100%
+  pointer-events: none
+  z-index: 2
+
+
+.nav__phone__container
+  position: fixed
+  bottom: 0
+  width: 100%
+  height: 50px
+  display: flex
+  align-items: center
+  justify-content: center
+  z-index: 300
+
+
+.nav__phone__content
+  width: 33.33333%
+  height: 100%
+  pointer-events: all
+  cursor: pointer
+  color: #fff
+
+  display: flex
+  align-items: center
+  justify-content: center
+  transition: .5s
+  z-index: 555
+
+
+.nav__active
+  box-shadow: 0px 0px 5px $color   ,inset 0px 0px 5px $color
+
+
+
+.nav__phone__content picture
+  width: 32px
+
+  display: flex
+  align-items: center
+  justify-content: center
+
+.nav__phone__content picture, .nav__phone__content picture svg
+  height: 80%
+
+.nav__phone__content picture svg, .nav__phone__content picture svg path
+  fill: #4b9deb !important
+
+.nav__active picture svg, .nav__active picture svg path
+  fill: #e6f1ff !important
+
+
+//  page
+.page__open
+  display: block !important
+
+
+.page__home
+  display: none
+
+
+.page__site
+  display: none
+
+
+.page__picture
+  display: none
+
+
+.page__3d
+  display: none
+
+
+
+// Cintent
+.container
+  padding: 0 10px
+  margin: auto
+  max-width: 100vh
+  z-index: 1
+  position: relative
+
+
+.Content
+
+  display: grid
+  grid-template-columns: repeat(auto-fit, 200px)
+  grid-gap: 40px
+  justify-content: center
+  align-content: center
+  text-align: center
+  position: relative
+  padding-top: 120px
+
+
+.link__portfolio
+  width: 200px
+  height: 200px
+  text-decoration: none
+  font-family: 'Raleway', sans-serif
+  font-size: 24px
+  letter-spacing: 10px
+  text-align: center
+  line-height: 150%
+
+
+  color: #fff
+
+  display: flex
+  justify-content: center
+  align-items: center
+
+  transition: 1.5s
+  position: relative
+  overflow: hidden
+
+  border-radius: 25px
+
+
+.link__portfolio:hover
+  box-shadow: 0 0 10px $color, 0 0 40px $color, 0 0 80px $color, inset 0 0 80px $color, inset 0 0 40px $color, inset 0 0 10px $color
+  cursor: pointer
+
+
+.link__portfolio img
+  height: 200px
+  width: 200px
+  position: absolute
+  top: -100%
+  transition: 1s
+  z-index: 1
+
+.link__portfolio:hover  img
+  top: 0%
+
+
+
+.link__portfolio h1
+  font-size: 24px
+  font-family: 'Raleway', sans-serif
+
+
+
+
+.link__portfolio svg
+  fill: #025502
+  width: 75px
+  height: 75px
+  position: absolute
+  bottom: -7%
+  left: -7%
+
+.red
+  fill: #791515 !important
+
+
+
+// Neon animation
+body .neon__body:nth-child(1)
+  position: absolute
+  display: block
+  top: 45%
+  left: -100%
+  width: 100%
+  height: 3px
+  background: linear-gradient(90deg, transparent, $color)
+  animation: 9s neon1 infinite
+
+body .neon__body:nth-child(2)
+  position: absolute
+  display: block
+  top: 65%
+  left: -100%
+  width: 100%
+  height: 3px
+  background: linear-gradient(90deg, transparent, $color)
+  animation: 9s neon1 infinite
+  animation-delay: 4s
+
+body .neon__body:nth-child(3)
+  position: absolute
+  display: block
+  right: 10%
+  top: -100%
+  height: 100%
+  width: 3px
+  background: linear-gradient(180deg, transparent, $color)
+  animation: 7s neon2 infinite
+  animation-delay: 1s
+
+body .neon__body:nth-child(4)
+  position: absolute
+  display: block
+  right: 12%
+  top: -100%
+  height: 100%
+  width: 3px
+  background: linear-gradient(180deg, transparent, $color)
+  animation: 5s neon2 infinite
+  animation-delay: 1.2s
+
+body .neon__body:nth-child(5)
+  position: absolute
+  display: block
+  left: 12%
+  top: -100%
+  height: 100%
+  width: 3px
+  background: linear-gradient(180deg, transparent, $color)
+  animation: 6s neon2 infinite
+  animation-delay: 3.2s
+
+body .neon__body:nth-child(6)
+  position: absolute
+  display: block
+  bottom: 20%
+  right: -100%
+  width: 100%
+  height: 3px
+  background: linear-gradient(270deg, transparent, $color)
+  animation: 4s neon3 infinite
+  animation-delay: 13.2s
+
+body .neon__body:nth-child(7)
+  position: absolute
+  display: block
+  top: 10%
+  right: -100%
+  width: 100%
+  height: 3px
+  background: linear-gradient(270deg, transparent, $color)
+  animation: 12s neon3 infinite
+  animation-delay: .2s
+
+body .neon__body:nth-child(8)
+  position: absolute
+  display: block
+  top: 40%
+  right: -100%
+  width: 100%
+  height: 5px
+  background: linear-gradient(270deg, transparent, $color)
+  animation: 15s neon3 infinite
+  animation-delay: 3.2s
+
+
+
+.link__portfolio span
+  position: absolute
+  display: block
+
+
+
+
+
+.link__portfolio span:nth-child(1)
+  top: 0
+  left: -100%
+  width: 100%
+  height: 3px
+  background: linear-gradient(90deg, transparent, $color)
+  animation: 2s neon1 infinite
+
+  @keyframes neon1
+    from
+      left: -100%
+
+    to
+      left: 135%
+
+
+
+
+.link__portfolio span:nth-child(2)
+  right: 0
+  top: -100%
+  height: 100%
+  width: 3px
+  background: linear-gradient(180deg, transparent, $color)
+  animation: 2s neon2 infinite
+  animation-delay: 0.5s
+
+  @keyframes neon2
+    from
+      top: -100%
+
+    to
+      top: 135%
+
+
+
+
+.link__portfolio span:nth-child(3)
+  bottom: 0
+  right: -100%
+  width: 100%
+  height: 3px
+  background: linear-gradient(270deg, transparent, $color)
+  animation: 2s neon3 infinite
+  animation-delay: 1s
+
+  @keyframes neon3
+    from
+      right: -100%
+
+    to
+      right: 135%
+
+
+
+
+.link__portfolio span:nth-child(4)
+  left: 0
+  bottom: -100%
+  height: 100%
+  width: 3px
+  background: linear-gradient(0deg, transparent, $color)
+  animation: 2s neon4 infinite
+  animation-delay: 1.5s
+
+  @keyframes neon4
+    from
+      bottom: -100%
+
+    to
+      bottom: 135%
+
+
+
+
+
+.span_v2:nth-child(1)
+  animation-delay: 1.5s !important
+
+.span_v2:nth-child(2)
+  animation-delay: 0s !important
+
+.span_v2:nth-child(3)
+  animation-delay: 0.5s !important
+
+.span_v2:nth-child(4)
+  animation-delay: 1s !important
+
+
+
+
+.span_v3:nth-child(1)
+  animation-delay: 1s !important
+
+.span_v3:nth-child(2)
+  animation-delay: 1.5s !important
+
+.span_v3:nth-child(3)
+  animation-delay: 0s !important
+
+.span_v3:nth-child(4)
+  animation-delay: 0.5s !important
+
+
+
+
+.span_v4:nth-child(1)
+  animation-delay: 0.5s !important
+
+.span_v4:nth-child(2)
+  animation-delay: 1s !important
+
+.span_v4:nth-child(3)
+  animation-delay: 1.5s !important
+
+.span_v4:nth-child(4)
+  animation-delay: 0s !important
+
+
+
+
+
+// Benjamin
+
+#fox
+  position: absolute
+  bottom: -70px
+  right: 0
+  height: 700px
+
+#body_fox
+  stroke: $color
+  stroke-dasharray: 2050
+  stroke-dashoffset: 2050
+  animation: animate-fox 15s linear forwards infinite
+
+#R_eye, #L_eye, ellipse
+  stroke: $color
+  stroke-dasharray: 240
+  stroke-dashoffset: 240
+  animation: animate-fox-eye 15s linear forwards infinite
+
+
+@keyframes animate-fox
+  0%
+    stroke-dashoffset:2050
+
+  25%
+    stroke-dashoffset:0
+
+  75%
+    stroke-dashoffset:0
+
+  100%
+    stroke-dashoffset:-2050
+
+
+@keyframes animate-fox-eye
+  0%
+    stroke-dashoffset:240
+
+  25%
+    stroke-dashoffset:0
+
+  75%
+    stroke-dashoffset:0
+
+  100%
+    stroke-dashoffset: -240

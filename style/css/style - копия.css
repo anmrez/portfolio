@@ -1,3 +1,14 @@
+::-webkit-scrollbar { /* chrome based */
+    width: 0px;  /* ширина scrollbar'a */
+    background: transparent;  /* опционально */
+}
+
+html {
+    -ms-overflow-style: none;  /* IE 10+ */
+    scrollbar-width: none; /* Firefox */
+}
+
+
 body{
 
   max-height: 100%;
@@ -14,6 +25,7 @@ body{
   display: block;
   position: absolute;
   z-index: 0;
+  position: fixed;
 
 }
 
@@ -202,6 +214,7 @@ h1,h2,h3,h5,h4,h6 {margin: 0;}
   position: relative;
   overflow: hidden;
 
+  border-radius: 25px;
 }
 
 .link__portfolio:hover{
@@ -522,11 +535,20 @@ body .neon__body:nth-child(8){
 /* ==MEDIA== */
 /* ========= */
 
-@media (max-width: 950px) {
-body{
-  overflow: auto;
+
+@media (max-width: 1400px) {
+  body{
+    overflow: auto;
+
+  }
+  .container{
+    padding-bottom: 20%;
+  }
+
+
 
 }
+@media (max-width: 950px) {
 
 .hint{
   display: none;
@@ -536,9 +558,6 @@ body{
 }
 
 
-.container{
-  padding-bottom: 20%;
-}
 
 #fox{
 position: fixed;
@@ -550,37 +569,3 @@ height: 400px;
 
 
 } /* END MEDIA (max-width: 950px) */
-
-
-
-
-
-@media (max-width: 1px) {
-
-
-
-  .neon{
-    position: fixed;
-
-  }
-
-  .benjamin{
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    height: 200px;
-    width: 100%;
-    z-index: 0;
-  }
-
-  .container{
-    padding-bottom: 40%;
-  }
-
-#fox{
-  position: absolute;
-  bottom: -70px;
-  right: 0;
-  height: 400px;
-}
-}

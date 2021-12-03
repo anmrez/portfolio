@@ -1,0 +1,125 @@
+/*=============================================
+===============MEDIA===========================
+================================================
+=================MEDIA==========================
+================================================
+==============================================*/
+
+@media (max-width: 1400px) {
+
+
+
+
+
+
+
+
+
+} /* =====================
+========1024__px===========
+========================== */
+
+@media (max-width: 1024px) {
+
+
+
+
+
+
+
+
+
+} /* =====================
+========800__px===========
+========================== */
+
+
+@media (max-width: 800px) {
+
+  /*=======Header========*/
+  .Header__navigation{
+    display: grid;
+    grid-template-rows: repeat(4,auto);
+    background: #42a8f68a;
+    grid-column: 1/-1;
+    transition: .5s linear;
+    clip-path: circle(100px at 120% -50%);
+    height: 100vh;
+    position: absolute;
+    left: -3%;
+    width: 106%;
+    pointer-events: none;
+    padding-top: 20%;
+    top: 0;
+  }
+
+  .Header__navigation.open{
+    clip-path: circle(1100px at 90% -10%);
+    pointer-events: all;
+  }
+
+  .Burger__active{
+    display: grid;
+    /*! top: 4%; */
+    height: 350px;
+  }
+
+  .Burger{
+    display: grid;
+  }
+
+  .Header__link{
+    margin: 0;
+    padding: 30px 0px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+/* /header  800px*/
+/* /intro   800px*/
+
+
+
+
+
+
+
+} /* =====================
+========500__px===========
+========================== */
+
+
+@media (max-width: 500px) {
+
+
+
+
+
+
+
+
+
+} /* =====================
+========400__px===========
+========================== */
+
+@media (max-width: 400px) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+} /* =====================
+========END===========
+========================== */
