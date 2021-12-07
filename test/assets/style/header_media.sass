@@ -1,0 +1,41 @@
+@media (max-width: 800px)
+
+
+  .container
+    max-width: 100%
+    // padding: 0
+
+  .logo
+    z-index: 5
+
+  .burger
+    display: flex
+    z-index: 5
+
+
+  .navigation
+    position: absolute
+    flex-direction: column
+    top: 0
+    left: -15px
+    padding: 0
+    width: 110%
+    height: 100vh
+    align-items: center
+    justify-content: center
+    pointer-events: none
+    // display: none
+    clip-path: circle(90px at 100% 0%)
+
+
+    li
+      display: flex
+      justify-content: center
+      align-items: center
+      padding: 25px 0
+      width: 100%
+      cursor: pointer
+      pointer-events: all
+      &:hover
+        a
+          color: $color_href_hover
